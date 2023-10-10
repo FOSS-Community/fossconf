@@ -1,0 +1,130 @@
+---
+import { Image } from 'astro:assets';
+
+import { year } from "@src/data/date"
+import Logo from "./fossconf.svg"
+
+const links = [
+  { href: "/discord", title: "Discord" },
+  { href: "https://twitter.com/fosscuk", title: "Twitter" },
+  { href: "https://www.instagram.com/fosscuk", title: "Instagram" },
+  { href: "https://github.com/fosscu-community", title: "GitHub" },
+]
+
+const archives = [
+  { href: "/past-events", title: "Past Events" },
+  {
+    href: "https://www.youtube.com/@FOSSCU/playlists",
+    title: "Recordings",
+  },
+]
+---
+
+<div class="footer">
+  <div>
+    <h4 style="color: var(--yellow);">FOSSCU</h4>
+    <ul>
+      {
+        links.map(({ href, title }) => (
+          <li>
+            <a href={href} target="_blank" rel="noreferrer noopener">
+              {title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div>
+    <h4 style="color: var(--green)">Archives</h4>
+    <ul>
+      {
+        archives.map(({ href, title }) => (
+          <li>
+            <a
+              href={href}
+              target={href.startsWith("https://") ? "_blank" : "_self"}
+              rel="noreferrer noopener"
+            >
+              {title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="branding">
+    <Image src={Logo} alt={`FOSSConf India ${year}`} />
+    <div class="copyright">Copyright &copy; {year}. All rights reserved.</div>
+  </div>
+</div>
+
+<style>
+  .footer {
+    background: #282a35;
+    padding: 4rem var(--padding);
+  }
+
+  .branding {
+    text-align: center;
+    margin-top: 3.375rem;
+  }
+
+  img {
+    margin-bottom: 1.625rem;
+    max-width: 100%;
+  }
+
+  .copyright {
+    font-size: 1.125rem;
+    font-weight: 300;
+  }
+
+  h4 {
+    white-space: nowrap;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.625rem;
+    line-height: 2;
+  }
+
+  .footer > div {
+    margin-bottom: 2rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0.8rem;
+  }
+
+  a {
+    --link-color: #fff;
+    --hover-link-color: #fff;
+  }
+
+  @media screen and (min-width: 768px) {
+    .footer {
+      display: flex;
+      align-items: start;
+      flex-wrap: wrap;
+    }
+
+    .footer > div:not(.branding) {
+      margin-right: 4rem;
+    }
+
+    .copyright {
+      text-align: left;
+      white-space: nowrap;
+    }
+    .branding {
+      margin-top: 1rem;
+      margin-left: auto;
+    }
+  }
+</style>

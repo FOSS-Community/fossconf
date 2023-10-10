@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets"
+
+import Google from "./logos/google.png"
+import Microdoft from "./logos/Microsoft.png"
+// import image from "./logos/image.png"
+
+const partners = [
+  /*
+  {
+    name: 'Google',
+    images: [Google, Google_2x],
+    link: 'https://google.com/',
+  },
+  {
+    name: 'Fosscu',
+    images: [foss, foss_2x],
+    link: 'https://www.fosscu.org/',
+  },
+  */
+]
+---
+
+{
+  partners.length > 0 ? (
+    <section id="partners" class="rows">
+      <div>
+        <h2>Partners</h2>
+      </div>
+      <div class="partners">
+        {partners.map(({ name, images: [img1x, img2x], link }) => (
+          <a href={link}>
+            <Image src={img1x} alt={name} />
+          </a>
+        ))}
+      </div>
+    </section>
+  ) : null
+}
+
+<style>
+  h2 {
+    --stroke-color: var(--red);
+  }
+  .partners {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  @media screen and (min-width: 768px) {
+    .partners {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    .partners {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  img {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+</style>

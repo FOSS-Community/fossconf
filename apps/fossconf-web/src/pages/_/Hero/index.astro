@@ -1,0 +1,70 @@
+---
+import Logo from "@src/components/Logo.astro"
+import Console from "../Console/index.astro"
+import formatter from "./formatter"
+import ConsoleClient from "./Console.svelte"
+import * as cfp from "@src/data/cfp"
+import {
+  discordLink,
+  ticketLink,
+  venueLink,
+  venueName,
+  volunteerLink,
+} from "@src/data/links"
+import { year, startDate, endDate } from "@src/data/date"
+
+const format = new Intl.DateTimeFormat("default", {
+  dateStyle: "medium",
+  timeStyle: "short",
+  timeZone: "Asia/Singapore",
+})
+
+const data = formatter()
+  .addEntry("title", `FOSSConf ${year}`)
+  .addEntry("startDate", startDate ? `${format.format(startDate)}` : "TBC")
+  .addEntry("endDate", endDate ? `${format.format(endDate)}` : "TBC")
+  .addEntry("inPersonLocation", `<a href="${venueLink}">${venueName}</a>`)
+  .addEntry("onlineLocation", `<a href="${discordLink}">Discord</a>`)
+  .addEntry("registration", `<a href="${ticketLink}">Get tickets!</a>`, true)
+  .addEntry("volunteer", `<a href="${volunteerLink}">Apply now!</a>`)
+  .addEntry(
+    "cfp",
+    +Date.now() > +cfp.deadline
+      ? "CFP is now closed."
+      : `<a href="${cfp.link}">${cfp.name}</a>`
+  )
+  .addEntry("description", "Join us for an eventful day of open source talks.")
+  .toString()
+---
+
+<hr />
+
+<section>
+  <Logo />
+
+  <Console>
+    <ConsoleClient client:idle>
+      <pre set:html={data} slot="data" />
+    </ConsoleClient>
+  </Console>
+</section>
+
+<hr />
+
+<style>
+  hr {
+    width: 100%;
+    background: url("/images/bgsquare.svg") repeat-x;
+    height: 20px;
+    outine: 0;
+    border: none;
+    margin: 0;
+  }
+  pre {
+    white-space: break-spaces;
+    line-height: 1.26;
+  }
+  hr:nth-of-type(2) {
+    margin-bottom: 3.5rem;
+  }
+</style>

@@ -1,0 +1,123 @@
+---
+import { Image } from "astro:assets"
+
+import alan from "./images/alan.png"
+import alvin from "./images/alvin.png"
+import ambrose from "./images/ambrose.jpeg"
+import brian from "./images/brian.png"
+import don from "./images/don.png"
+import hazel from "./images/hazel.png"
+import hongkheng from "./images/hongkheng.png"
+import jianzhen from "./images/jianzhen.png"
+import juliana from "./images/juliana.jpeg"
+import lihautan from "./images/lihautan.png"
+import luther from "./images/luther.png"
+import mrgi from "./images/mrgi.png"
+import patricia from "./images/patricia.png"
+import perwyl from "./images/perwyl.png"
+import sam from "./images/sam.png"
+import saumil from "./images/saumil.jpg"
+import sampoder from "./images/sampoder.jpeg"
+import shao from "./images/shao.png"
+import sreedhar from "./images/sreedhar.jpeg"
+import stephanie from "./images/stephanie.png"
+import terence from "./images/terence.png"
+import thye from "./images/thye.png"
+import tomoe from "./images/tomoe.png"
+import vina from "./images/vina.png"
+import weitat from "./images/weitat.png"
+import chiran from "./images/chiran.png"
+import eliot from "./images/eliot.png"
+import nori from "./images/nori.png"
+
+const organisers = [
+  //{ name: "Alan", image: alan },
+  //{ name: "Alvin", image: alvin },
+  { name: "Ambrose", image: ambrose },
+  //{ name: "Brian", image: brian },
+  //{ name: "Chiran", image: chiran },
+  //{ name: "Don", image: don },
+  //{ name: "Eliot", image: eliot },
+  //{ name: "Hazel", image: hazel },
+  //{ name: "Hong Kheng", image: hongkheng },
+  { name: "Jian Zhen", image: jianzhen },
+  { name: "Juliana", image: juliana },
+  { name: "Li Hau", image: lihautan },
+  //{ name: "Luther", image: luther },
+  //{ name: "Mr Gi", image: mrgi },
+  //{ name: "Nori", image: nori },
+  //{ name: "Patricia", image: patricia },
+  { name: "Perwyl", image: perwyl },
+  { name: "Sam", image: sam },
+  { name: "Saumil", image: saumil },
+  //{ name: "Sam Poder", image: sampoder },
+  //{ name: "Shao", image: shao },
+  //{ name: "Sreedhar", image: sreedhar },
+  //{ name: "Stephanie", image: stephanie },
+  { name: "Terence", image: terence },
+  //{ name: "Thye", image: thye },
+  { name: "Tomoe", image: tomoe },
+  //{ name: "Vina", image: vina },
+  //{ name: "Wei Tat", image: weitat },
+]
+---
+
+<section id="organisers" class="rows">
+  <div>
+    <h2>Organisers</h2>
+  </div>
+  <div class="grid">
+    {
+      organisers.map((organiser) => {
+        return (
+          <div class="organiser">
+            <div class="container">
+              <Image src={organiser.image} alt={organiser.name} width={200} />
+            </div>
+            {organiser.name}
+          </div>
+        )
+      })
+    }
+  </div>
+</section>
+
+<style>
+  h2 {
+    --stroke-color: var(--yellow);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  @media screen and (min-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  @media screen and (min-width: 900px) {
+    .grid {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .organiser {
+    text-align: center;
+  }
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+  }
+</style>
