@@ -149,7 +149,7 @@ export default function handleTerminal({
             val += `${diff} more day${diff > 1 ? 's' : ''} to go!`;
           }
         } else if (cmd === 'contact') {
-          val = 'info at fosscu dot org';
+          val = 'fosscu at kiet dot edu';
         } else if (cmd === 'archives') {
           val = '<a href="/past-events">View past events</a>';
         } else if (cmd === 'game') {
