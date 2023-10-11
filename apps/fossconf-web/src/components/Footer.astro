@@ -11,12 +11,14 @@ const links = [
   { href: "https://github.com/fosscu-community", title: "GitHub" },
 ]
 
-const archives = [
-  { href: "/past-events", title: "Past Events" },
+const readmore = [
+  { href: "https://fosscu.org/", title: "fosscu.org" },
   {
-    href: "https://www.youtube.com/@FOSSCU/playlists",
-    title: "Recordings",
+    href: "https://docs.fosscu.org/",
+    title: "About FOSSCU",
   },
+  { href: "https://github.com/FOSS-Community/", title: "Contribute" },
+  { href: "https://lu.ma/fosscu", title: "Calendar" },
 ]
 ---
 
@@ -36,10 +38,10 @@ const archives = [
     </ul>
   </div>
   <div>
-    <h4 style="color: var(--green)">Archives</h4>
+    <h4 style="color: var(--green)">Read More</h4>
     <ul>
       {
-        archives.map(({ href, title }) => (
+        readmore.map(({ href, title }) => (
           <li>
             <a
               href={href}
