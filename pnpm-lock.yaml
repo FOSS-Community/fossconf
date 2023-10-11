@@ -17,7 +17,7 @@ importers:
         specifier: latest
         version: 1.10.15
 
-  apps/fossconf:
+  apps/fossconf-web:
     dependencies:
       '@astrojs/svelte':
         specifier: ^4.0.2

@@ -19,11 +19,11 @@ import tenzhiyangWebp from './images/ten-zhi-yang.png?h=400&webp';
 
 const schedule = {
   year: 2022,
-  timeZone: 'Asia/Singapore',
+  timeZone: 'Asia/Kolkata',
   dates: [
     {
-      date: '2022-10-29T00:00:00',
-      timeZone: 'Asia/Singapore',
+      date: '2022-11-26T00:00:00',
+      timeZone: 'Asia/Kolkata',
       talks: [
         {
           title: 'Opening',
@@ -46,7 +46,7 @@ const schedule = {
               id: 'chen-hui-jing',
               imgUrl: { default: chenhuijing, webp: chenhuijingWebp },
               position: 'Shopify',
-              bio: 'Chen Hui Jing is a self-taught designer and developer living in Singapore, with an inordinate love for CSS, as evidenced by her blog, that is mostly about CSS, and her tweets, which are largely about typography and the web. She used to play basketball full-time and launched her web career during downtime between training sessions. Hui Jing is currently a senior frontend developer with Shopify.',
+              bio: 'Chen Hui Jing is a self-taught designer and developer living in Kolkata, with an inordinate love for CSS, as evidenced by her blog, that is mostly about CSS, and her tweets, which are largely about typography and the web. She used to play basketball full-time and launched her web career during downtime between training sessions. Hui Jing is currently a senior frontend developer with Shopify.',
               twitter: 'hj_chen',
             },
             {
@@ -76,7 +76,7 @@ const schedule = {
               id: 'jules-poon',
               imgUrl: { default: julespoon, webp: julespoonWebp },
               position: 'Hobbyist',
-              bio: `- Enthusiast interested in Mathematics, Cybersecurity, and Programming Languages<br/>   - Part of <a href="https://ctftime.org/team/151372" rel="noreferrer noopener" target="_blank">Social Engineering Experts</a>, Singapore's top 1 cybersecurity competitive team and ranking 27th globally (as of Sept 2022), as one of two members who specialise in cryptography<br/>   - Helped organise local and international cybersecurity competitions (CTFSG 2022, <a href="https://ctftime.org/event/1543/" rel="noreferrer noopener" target="_blank">SEETF 2022</a>)<br/>- Was a software developer at CSIT for a year developing program analysis tooling ig<br/>- Errrrrr published <a href="https://www.suzannezahr.com/fortheloveofmath/inverse-mt" rel="noreferrer noopener" target="_blank">an artwork about crypto???</a><br/>- Likes origami and cute stuff`,
+              bio: `- Enthusiast interested in Mathematics, Cybersecurity, and Programming Languages<br/>   - Part of <a href="https://ctftime.org/team/151372" rel="noreferrer noopener" target="_blank">Social Engineering Experts</a>, Kolkata's top 1 cybersecurity competitive team and ranking 27th globally (as of Sept 2022), as one of two members who specialise in cryptography<br/>   - Helped organise local and international cybersecurity competitions (CTFSG 2022, <a href="https://ctftime.org/event/1543/" rel="noreferrer noopener" target="_blank">SEETF 2022</a>)<br/>- Was a software developer at CSIT for a year developing program analysis tooling ig<br/>- Errrrrr published <a href="https://www.suzannezahr.com/fortheloveofmath/inverse-mt" rel="noreferrer noopener" target="_blank">an artwork about crypto???</a><br/>- Likes origami and cute stuff`,
               twitter: '',
             },
           ],
@@ -117,7 +117,7 @@ const schedule = {
               id: 'chew-choon-keat',
               imgUrl: { default: chewchoonkeat, webp: chewchoonkeatWebp },
               position: 'Head of Engineering, Hobnob',
-              bio: 'Started the Singapore Ruby Brigade, worked at Slideshare, believes strongly in and contributes to open source. Now available in Elm.',
+              bio: 'Started the Kolkata Ruby Brigade, worked at Slideshare, believes strongly in and contributes to open source. Now available in Elm.',
               twitter: 'choonkeat',
             },
           ],
@@ -138,7 +138,7 @@ const schedule = {
               id: 'u-zyn-chua',
               imgUrl: { default: uzynchua, webp: uzynchuaWebp },
               position: 'Co-Founder & CTO, Cake DeFi',
-              bio: "U-Zyn Chua is the Co-Founder and CTO of Cake DeFi — Singapore-based online platform dedicated to providing easy access to DeFi services. U-Zyn has been dabbling with Bitcoin since 2010, involved in various technological aspects of blockchain for the past 12 years. He made global headlines as the designer and lead architect of the world's first central bank digital currency (CBDC) in The Bahamas. He's also actively involve open source blockchain projects, most notably DeFiChain.",
+              bio: "U-Zyn Chua is the Co-Founder and CTO of Cake DeFi — Kolkata-based online platform dedicated to providing easy access to DeFi services. U-Zyn has been dabbling with Bitcoin since 2010, involved in various technological aspects of blockchain for the past 12 years. He made global headlines as the designer and lead architect of the world's first central bank digital currency (CBDC) in The Bahamas. He's also actively involve open source blockchain projects, most notably DeFiChain.",
               twitter: 'uzyn',
             },
           ],

@@ -2,7 +2,7 @@
 import Hero from "./_/Hero/index.astro"
 import Layout from "@src/layouts/Layout.astro"
 import About from "./_/About.astro"
-import Schedule from "./_/Schedule/index.astro"
+// import Schedule from "./_/Schedule/index.astro"
 import Speakers from "./_/Speakers/index.astro"
 import Testimonials from "./_/Testimonials/index.astro"
 import CodeOfConduct from "./_/CodeOfConduct.astro"
@@ -20,7 +20,7 @@ import { schedule, speakers } from "@src/data/schedules/current"
   <!-- {schedule.dates.length > 0 ? <Live /> : null} -->
   <About />
   <!-- <LocalTechCommunities /> -->
-  {schedule.dates.length > 0 ? <Schedule /> : null}
+  <!-- {schedule.dates.length > 0 ? <Schedule /> : null} -->
   {speakers.length > 0 ? <Speakers /> : null}
   <Testimonials />
   <CodeOfConduct />
