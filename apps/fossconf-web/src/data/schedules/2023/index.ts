@@ -70,9 +70,7 @@
 // export { schedule, speakers, tracks, gridUrl };
 
 import nikita from './images/nikita.jpg?h=400'
-import nikitaWebp from './images/nikita.jpg?h=400@webp'
 import tushar from './images/tushar.jpg?h=400'
-import tusharWebp from './images/tushar.jpg?h=400@webp'
 
 const schedule = {
   year: 2023,
@@ -101,7 +99,7 @@ const schedule = {
             {
               name: 'Nikita Sobolev',
               id: 'nikita',
-              imgUrl: { default: nikita, webp: nikitaWebp },
+              imgUrl: { default: nikita },
               position: 'wemake.services',
               bio: 'Nikita Sobolev, a versatile CTO, mentor, and advocate for open source, with a passion for spreading knowledge and organizing conferences',
               twitter: 'nikita',
@@ -109,7 +107,7 @@ const schedule = {
             {
               name: 'Another One',
               id: 'another-one',
-              imgUrl: { default: tushar, webp: tusharWebp },
+              imgUrl: { default: tushar },
               position: 'Senior Engineer, BlackRock',
               bio: '',
               twitter: 'another',
@@ -135,7 +133,7 @@ const schedule = {
             {
               name: 'Nikita Sobolev',
               id: 'nikita',
-              imgUrl: { default: nikita, webp: nikitaWebp },
+              imgUrl: { default: nikita},
               position: 'wemake.services',
               bio: 'Nikita Sobolev, a versatile CTO, mentor, and advocate for open source, with a passion for spreading knowledge and organizing conferences',
               twitter: 'nikita',
