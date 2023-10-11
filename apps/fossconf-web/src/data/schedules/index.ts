@@ -1,5 +1,5 @@
-import nikita from '../../images/speakers/nikita.jpg'
-import tushar from '../../images/speakers/tushar.jpg'
+import nikita from '../images/speakers/nikita.jpg'
+import tushar from '../images/speakers/tushar.jpeg'
 
 const schedule = {
   year: 2023,
