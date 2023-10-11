@@ -69,8 +69,8 @@
 
 // export { schedule, speakers, tracks, gridUrl };
 
-import nikita from './images/nikita.jpg?h=400'
-import tushar from './images/tushar.jpg?h=400'
+import nikita from '../../images/speakers/nikita.jpg'
+import tushar from '../../images/speakers/tushar.jpg'
 
 const schedule = {
   year: 2023,
