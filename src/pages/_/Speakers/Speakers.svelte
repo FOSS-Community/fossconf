@@ -42,9 +42,6 @@
       if (timeoutId) clearTimeout(timeoutId);
     };
   });
-
-  $: if (typeof window !== 'undefined' && focus == undefined)
-    window.location.hash = '😘';
 </script>
 
 {#each speakers as speaker}
