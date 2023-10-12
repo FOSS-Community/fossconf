@@ -12,7 +12,6 @@ import { Image } from 'astro:assets';
   export let position;
   export let bio;
   export let twitter;
-  export let website;
   export let focused;
 
   const dispatch = createEventDispatcher();
@@ -102,14 +101,6 @@ import { Image } from 'astro:assets';
             transition:scale={{ easing, duration }}
             style="display:inline-block;"
             href="https://twitter.com/{twitter}">@{twitter}</a
-          >
-        {/if}
-        {#if website}
-          <br />
-          <a
-            transition:scale={{ easing, duration }}
-            style="display:inline-block;"
-            href="https://{website}">{website}</a
           >
         {/if}
         <p out:fade={{ duration, easing }} in:scale={{ duration, easing }}>

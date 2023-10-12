@@ -20,6 +20,14 @@ const readmore = [
   { href: "https://github.com/FOSS-Community/", title: "Contribute" },
   { href: "https://lu.ma/fosscu", title: "Calendar" },
 ]
+
+const codeofcoduct = [
+  { href: "/coc", title: "Code Of Conduct" },
+  {
+    href: "https://docs.fosscu.org/Docs/values",
+    title: "Core Values",
+  },
+]
 ---
 
 <div class="footer">
@@ -55,6 +63,24 @@ const readmore = [
       }
     </ul>
   </div>
+  <div>
+    <h4 style="color: var(--red)">Code Of Coduct</h4>
+    <ul>
+      {
+        codeofcoduct.map(({ href, title }) => (
+          <li>
+            <a
+              href={href}
+              target={href.startsWith("https://") ? "_blank" : "_self"}
+              rel="noreferrer noopener"
+            >
+              {title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
   <div class="branding">
     <Image src={Logo} alt={`FOSSConf India ${year}`} />
     <div class="copyright">Copyright &copy; {year}. All rights reserved.</div>
@@ -63,7 +89,7 @@ const readmore = [
 
 <style>
   .footer {
-    background: #282a35;
+    background: #222a2a;
     padding: 4rem var(--padding);
   }
 
@@ -105,7 +131,7 @@ const readmore = [
   }
 
   a {
-    --link-color: #fff;
+    --link-color: #accec8;
     --hover-link-color: #fff;
   }
 
