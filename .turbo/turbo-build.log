@@ -1,0 +1,72 @@
+
+> fossconf@0.0.1 build /home/vivek/projects/fossconf/apps/fossconf-web
+> astro build
+
+11:59:56 pm [content] No content directory found. Skipping type generation.
+11:59:56 pm [build] output target: static
+11:59:56 pm [build] Collecting build info...
+11:59:56 pm [build] Completed in 98ms.
+11:59:56 pm [build] Building static entrypoints...
+11:59:56 pm [vite-plugin-svelte] /home/vivek/projects/fossconf/node_modules/.pnpm/svelte-knobby@0.3.4_svelte@3.59.2/node_modules/svelte-knobby/Knobby.svelte:92:2 A11y: visible, non-interactive elements with an on:click event must be accompanied by an on:keydown, on:keyup, or on:keypress event.
+90:     </span>
+91: 
+92:     <div
+        ^
+93:       class="drag-bar"
+94:       on:click={(e) => (e.stopPropagation(), e.preventDefault())}
+11:59:57 pm [build] Completed in 1.25s.
+
+ building client 
+11:59:57 pm [vite-plugin-svelte] /home/vivek/projects/fossconf/node_modules/.pnpm/svelte-knobby@0.3.4_svelte@3.59.2/node_modules/svelte-knobby/Knobby.svelte:92:2 A11y: visible, non-interactive elements with an on:click event must be accompanied by an on:keydown, on:keyup, or on:keypress event.
+90:     </span>
+91: 
+92:     <div
+        ^
+93:       class="drag-bar"
+94:       on:click={(e) => (e.stopPropagation(), e.preventDefault())}
+[plugin:vite:resolve] Module "util" has been externalized for browser compatibility, imported by "/home/vivek/projects/fossconf/node_modules/.pnpm/sharp@0.32.6/node_modules/sharp/lib/constructor.js". See http://vitejs.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] Module "stream" has been externalized for browser compatibility, imported by "/home/vivek/projects/fossconf/node_modules/.pnpm/sharp@0.32.6/node_modules/sharp/lib/constructor.js". See http://vitejs.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] Module "path" has been externalized for browser compatibility, imported by "/home/vivek/projects/fossconf/node_modules/.pnpm/sharp@0.32.6/node_modules/sharp/lib/output.js". See http://vitejs.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/home/vivek/projects/fossconf/node_modules/.pnpm/sharp@0.32.6/node_modules/sharp/lib/utility.js". See http://vitejs.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] Module "path" has been externalized for browser compatibility, imported by "/home/vivek/projects/fossconf/node_modules/.pnpm/sharp@0.32.6/node_modules/sharp/lib/utility.js". See http://vitejs.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] Module "events" has been externalized for browser compatibility, imported by "/home/vivek/projects/fossconf/node_modules/.pnpm/sharp@0.32.6/node_modules/sharp/lib/utility.js". See http://vitejs.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/home/vivek/projects/fossconf/node_modules/.pnpm/sharp@0.32.6/node_modules/sharp/lib/libvips.js". See http://vitejs.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] Module "os" has been externalized for browser compatibility, imported by "/home/vivek/projects/fossconf/node_modules/.pnpm/sharp@0.32.6/node_modules/sharp/lib/libvips.js". See http://vitejs.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] Module "path" has been externalized for browser compatibility, imported by "/home/vivek/projects/fossconf/node_modules/.pnpm/sharp@0.32.6/node_modules/sharp/lib/libvips.js". See http://vitejs.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] Module "child_process" has been externalized for browser compatibility, imported by "/home/vivek/projects/fossconf/node_modules/.pnpm/sharp@0.32.6/node_modules/sharp/lib/libvips.js". See http://vitejs.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] Module "child_process" has been externalized for browser compatibility, imported by "/home/vivek/projects/fossconf/node_modules/.pnpm/detect-libc@2.0.2/node_modules/detect-libc/lib/detect-libc.js". See http://vitejs.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin:vite:resolve] Module "fs" has been externalized for browser compatibility, imported by "/home/vivek/projects/fossconf/node_modules/.pnpm/detect-libc@2.0.2/node_modules/detect-libc/lib/filesystem.js". See http://vitejs.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+Completed in 1.03s.
+
+
+ generating static routes 
+▶ src/pages/index.astro
+  └─ /index.html (+0.80s)
+▶ src/pages/discord.astro
+  └─ /discord/index.html (+3ms)
+▶ src/pages/404.astro
+  └─ /404.html (+2ms)
+
+ generating optimized images 
+  ▶ /_astro/fossconf.1e4115da_1aFxxT.svg (before: 14kB, after: 14kB) (+10ms) (1/18)
+  ▶ /_astro/akshat.ffbc46ad_qhkIh.webp (before: 17kB, after: 3kB) (+16ms) (2/18)
+  ▶ /_astro/kanishk.942a11c1_2eVEKF.webp (before: 12350kB, after: 7kB) (+128ms) (3/18)
+  ▶ /_astro/vivek.1da357b5_Z2jqw3E.webp (before: 407kB, after: 2kB) (+51ms) (4/18)
+  ▶ /_astro/shivamy.1203df64_Z19Skpc.webp (before: 147kB, after: 2kB) (+13ms) (5/18)
+  ▶ /_astro/mayank.14e09948_VVI7e.webp (before: 39kB, after: 8kB) (+20ms) (6/18)
+  ▶ /_astro/shivamk.2944a971_Z2vbuUx.webp (before: 29kB, after: 7kB) (+13ms) (7/18)
+  ▶ /_astro/utkarsh.2835c405_ll8e5.webp (before: 2429kB, after: 8kB) (+26ms) (8/18)
+  ▶ /_astro/anshika.1daec854_Z1KPE1H.webp (before: 6034kB, after: 14kB) (+83ms) (9/18)
+  ▶ /_astro/abhinav.2dce59a5_27NJaH.webp (before: 69kB, after: 4kB) (+14ms) (10/18)
+  ▶ /_astro/aditya.2c0ae0d9_Z1ckq7T.webp (before: 582kB, after: 4kB) (+14ms) (11/18)
+  ▶ /_astro/vishesh.edcfe23a_ZolQeg.webp (before: 1070kB, after: 10kB) (+33ms) (12/18)
+  ▶ /_astro/sam.57c446ec_JMdoi.webp (before: 31kB, after: 4kB) (+22ms) (13/18)
+  ▶ /_astro/rishika.d5eff74b_ZblaTj.webp (before: 3918kB, after: 9kB) (+53ms) (14/18)
+  ▶ /_astro/ghanatava.94b18e67_L8ng4.webp (before: 83kB, after: 6kB) (+13ms) (15/18)
+  ▶ /_astro/khushi01.ff348490_kbsR0.webp (before: 70kB, after: 4kB) (+12ms) (16/18)
+  ▶ /_astro/spedx.489728c3_oQ4P3.webp (before: 4kB, after: 2kB) (+28ms) (17/18)
+  ▶ /_astro/fossconf.1e4115da_Z24JixN.svg (before: 14kB, after: 14kB) (+1ms) (18/18)
+Completed in 1.36s.
+
+11:59:59 pm [build] 3 page(s) built in 3.75s
+11:59:59 pm [build] Complete!
