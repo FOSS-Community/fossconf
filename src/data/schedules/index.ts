@@ -34,6 +34,7 @@ const schedule = {
               imgUrl: { default: nikita },
               position: 'CTO, wemake.services',
               bio: 'Nikita Sobolev, a versatile CTO, mentor, and advocate for open source, with a passion for spreading knowledge and organizing conferences',
+              website: 'sobolevn.me/about/',
             },
           ],
         },
