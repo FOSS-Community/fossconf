@@ -20,6 +20,14 @@ const readmore = [
   { href: "https://github.com/FOSS-Community/", title: "Contribute" },
   { href: "https://lu.ma/fosscu", title: "Calendar" },
 ]
+
+const codeofcoduct = [
+  { href: "/coc", title: "Code Of Conduct" },
+  {
+    href: "https://docs.fosscu.org/Docs/values",
+    title: "Core Values",
+  },
+]
 ---
 
 <div class="footer">
@@ -42,6 +50,24 @@ const readmore = [
     <ul>
       {
         readmore.map(({ href, title }) => (
+          <li>
+            <a
+              href={href}
+              target={href.startsWith("https://") ? "_blank" : "_self"}
+              rel="noreferrer noopener"
+            >
+              {title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div>
+    <h4 style="color: var(--red)">Code Of Coduct</h4>
+    <ul>
+      {
+        codeofcoduct.map(({ href, title }) => (
           <li>
             <a
               href={href}
