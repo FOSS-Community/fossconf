@@ -1,17 +1,17 @@
 ---
-import { speakers } from "@src/data/schedules/current"
+import { penelists } from "@src/data/schedules/current"
 import { year } from "@src/data/date"
-import Speakers from "./Speakers/Speakers.svelte"
+import Penelists from "./Penelists.svelte"
 ---
 
-<section id="speakers" class="rows">
+<section id="penelists" class="rows">
   <div>
     <h2>
-      Keynote Speakers
+      Panelists
     </h2>
   </div>
   <div class="grid">
-    <Speakers speakers={speakers} client:visible />
+    <Penelists penelists={penelists} client:visible />
   </div>
 </section>
 

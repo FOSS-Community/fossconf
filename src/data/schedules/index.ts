@@ -108,7 +108,7 @@ const schedule = {
           endTime: '2023-11-26T17:15:00+08:00',
           track: '0',
           id: 'talk-title',
-          speakers: [
+          penelists: [
             {
               name: 'Shreya Prasad',
               id: 'shreya',
@@ -137,6 +137,11 @@ const speakers = schedule.dates.flatMap((date) =>
     .flatMap((talk) => talk.speakers ?? [])
     .sort((a, b) => (a.name > b.name ? 1 : -1)),
 );
+const penelists = schedule.dates.flatMap((date) =>
+  date.talks
+    .flatMap((talk) => talk.penelists ?? [])
+    .sort((a, b) => (a.name > b.name ? 1 : -1)),
+);
 const tracks = Array.from(
   new Set(
     schedule.dates
@@ -145,4 +150,4 @@ const tracks = Array.from(
   ),
 );
 
-export { schedule, speakers, tracks };
+export { schedule, speakers, penelists, tracks };
