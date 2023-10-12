@@ -1,20 +1,29 @@
 {
+  "name": "fossconf",
+  "type": "module",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "fmt": "prettier --write ."
+  },
+  "dependencies": {
+    "@astrojs/svelte": "^4.0.2",
+    "astro": "^3.1.4",
+    "remark-gfm": "^4.0.0",
+    "remark-html": "^16.0.1",
+    "remark-parse": "^11.0.0",
+    "svelte": "^3.59.2",
+    "svelte-knobby": "^0.3.4",
+    "unified": "^11.0.3",
+    "vite-imagetools": "^4.0.11",
+    "xss": "^1.0.14"
   },
   "devDependencies": {
-    "eslint": "^8.48.0",
-    "prettier": "^3.0.3",
-    "tsconfig": "workspace:*",
-    "turbo": "latest"
-  },
-  "packageManager": "pnpm@8.6.10",
-  "name": "fossconf",
-  "dependencies": {
-    "sharp": "^0.32.6"
+    "prettier": "^3.0.3"
   }
 }
