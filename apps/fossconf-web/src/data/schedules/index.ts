@@ -1,9 +1,9 @@
-import nikita from '../images/speakers/nikita.jpg'
-import tushar from '../images/speakers/tushar.jpeg'
-import tushars from '../images/speakers/tushars.jpg'
-import jatink from '../images/speakers/jatink.jpg'
-import shreya from '../images/speakers/shreya.png'
-import swastika from '../images/speakers/swastika.png'
+import nikita from '../images/speakers/nikita.jpg?h=400'
+import tushar from '../images/speakers/tushar.jpeg?h=400'
+import tushars from '../images/speakers/tushars.jpg?h=400'
+import jatink from '../images/speakers/jatink.jpg?h=400'
+import shreya from '../images/speakers/shreya.png?h=400'
+import swastika from '../images/speakers/swastika.png?h=400'
 
 const schedule = {
   year: 2023,
@@ -31,7 +31,7 @@ const schedule = {
             {
               name: 'Nikita Sobolev',
               id: 'nikita',
-              imgUrl: {  nikita },
+              imgUrl: { default: nikita },
               position: 'CTO, wemake.services',
               bio: 'Nikita Sobolev, a versatile CTO, mentor, and advocate for open source, with a passion for spreading knowledge and organizing conferences',
             },
@@ -55,7 +55,7 @@ const schedule = {
             {
               name: 'Tushar Sadhwani',
               id: 'tushars',
-              imgUrl: {tushars},
+              imgUrl: { default: tushars },
               position: 'SDE II at DeepSource',
               bio: 'Long term Python developer, author, technical reviewer and speaker. Writing static analysis tools @ DeepSource.',
               twitter: 'tusharisanerd',
@@ -74,7 +74,7 @@ const schedule = {
             {
               name: 'Tushar Gupta',
               id: 'tushar',
-              imgUrl: { tushar},
+              imgUrl: { default: tushar },
               position: 'SDE @Samagra',
               bio: 'SDE at Samagra, GitHub Campus Ambassador, MLH Fellow for Fall&apos;22, and Summer Fellow&apos;22 at Processing Foundation.',
               twitter: 'tushar5526',
@@ -93,7 +93,7 @@ const schedule = {
             {
               name: 'Jatin K Malik',
               id: 'jatink',
-              imgUrl: { jatink},
+              imgUrl: { default: jatink },
               position: 'Principle SE @Atlassian',
               bio: 'Nikita Sobolev, a versatile CTO, mentor, and advocate for open source, with a passion for spreading knowledge and organizing conferences',
               twitter: 'jatinkrmalik',
@@ -112,7 +112,7 @@ const schedule = {
             {
               name: 'Shreya Prasad',
               id: 'shreya',
-              imgUrl: { default: shreya},
+              imgUrl: { default: shreya },
               position: 'SDE @Atlassian',
               bio: 'Software Development Engineer @Atlassian | Prev: Intuit, BNY Mellon | GitHub Campus Expert&apos;21 | GSoC&apos;21, GCI&apos;19 Mentor @CircuitVerse',
               twitter: 'shreyacasmalert',
@@ -120,7 +120,7 @@ const schedule = {
             {
               name: 'Swastika Yadav',
               id: 'swastika',
-              imgUrl: { default: swastika},
+              imgUrl: { default: swastika },
               position: 'Developer Advocate @Rig_dev',
               bio: 'Prev: @tursodatabase | Tweeting about Javascript, Web Development, Communities, Remote jobs, Travel',
               twitter: 'swastika0015',
