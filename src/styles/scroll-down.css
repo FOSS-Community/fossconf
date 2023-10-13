@@ -1,8 +1,11 @@
 .scroll-down {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    z-index: 1000;
+    background-color: red;
   }
   
   .arrow {
