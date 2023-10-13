@@ -24,7 +24,6 @@ const cmdWithoutArg = [
   'sponsors',
   'archives',
   'contact',
-  'game',
   'schedule',
   'q',
 ];
@@ -123,7 +122,7 @@ export default function handleTerminal({
             val = 'Registration is not open yet';
           }
         } else if (cmd === 'volunteer') {
-          val = `<a href="${volunteerLink}">Volunteer with us</a>`;
+          val = `<a href="https://airtable.com/appyqESu1jTLyRj5b/shrADLMpduaaLPS9R">Volunteer with us</a>`;
         } else if (cmd === 'location') {
           val = `In-person: <a href="${venueLink}">${venueName}</a><br>Online: <a href="${discordLink}">Discord</a>`;
         } else if (cmd === 'dir') {

@@ -4,6 +4,7 @@ import Console from "../Console/index.astro"
 import formatter from "./formatter"
 import ConsoleClient from "./Console.svelte"
 import * as cfp from "@src/data/cfp"
+import ScrollDown from './ScrollDown.astro';
 import {
   discordLink,
   ticketLink,
@@ -26,7 +27,7 @@ const data = formatter()
   .addEntry("inPersonLocation", `<a href="${venueLink}">${venueName}</a>`)
   .addEntry("onlineLocation", `<a href="${discordLink}">Discord</a>`)
   .addEntry("registration", `<a href="${ticketLink}">Registrations Opens Soon!</a>`, true)
-  .addEntry("volunteer", `<a href="${cfp.link}">Apply now!</a>`)
+  .addEntry("volunteer", `<a href="https://airtable.com/appyqESu1jTLyRj5b/shrADLMpduaaLPS9R">Apply now!</a>`)
   .addEntry(
     "cfp",
     +Date.now() > +cfp.deadline
@@ -47,6 +48,8 @@ const data = formatter()
       <pre set:html={data} slot="data" />
     </ConsoleClient>
   </Console>
+
+  <ScrollDown />
 </section>
 
 <hr />
