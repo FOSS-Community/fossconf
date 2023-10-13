@@ -168,7 +168,7 @@ import { Image } from 'astro:assets';
     position: absolute;
     z-index: 1;
     bottom: 0;
-    background: linear-gradient(rgba(240, 207, 97, 0), rgba(43, 41, 45, 0.8));
+    background: linear-gradient(rgba(240, 207, 97, 0), rgba(43, 41, 45, 0.558));
   }
   figure img {
     position: absolute;
@@ -241,10 +241,10 @@ import { Image } from 'astro:assets';
     gap: var(--padding);
     align-items: center;
     padding: var(--padding);
-    overflow: scroll;
+    overflow: auto;
   }
   .backdrop {
-    background-color: #000;
+    background-color: #000000b5;
     position: absolute;
     top: 0;
     left: 0;
