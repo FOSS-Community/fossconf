@@ -4,17 +4,14 @@
 </script>
 
 {#if gameMode}
-  {#await import('./Game/index.svelte')}
     Loading game bundles...
-  {:then { default: Component }}
+    <!-- svelte-ignore missing-declaration -->
     <Component
       on:quit={() => {
         gameMode = false;
       }}
     />
-  {:catch}
     Fail to load.
-  {/await}
 {:else}
   <div>
     <slot name="data" />

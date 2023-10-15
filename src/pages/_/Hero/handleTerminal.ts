@@ -151,11 +151,6 @@ export default function handleTerminal({
           val = 'fosscu at kiet dot edu';
         } else if (cmd === 'archives') {
           val = '<a href="/past-events">View past events</a>';
-        } else if (cmd === 'game') {
-          val = 'Starting game...';
-          import('./Game/index.svelte').then(() => {
-            dispatch('gameOn');
-          });
         } else if (cmd === 'schedule') {
           location.hash = 'schedule';
         }
