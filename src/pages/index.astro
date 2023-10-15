@@ -16,9 +16,9 @@ import { schedule, speakers, penelists } from "@src/data/schedules/current"
 
 <Layout title="Home">
   <Hero />
+  <About />
   {+Date.now() > +cfp.deadline ? null : <CallForPaper />}
   <!-- {schedule.dates.length > 0 ? <Live /> : null} -->
-  <About />
   <!-- {schedule.dates.length > 0 ? <Schedule /> : null} -->
   {speakers.length > 0 ? <Speakers /> : null}
   {penelists.length > 0 ? <Penelists /> : null}
