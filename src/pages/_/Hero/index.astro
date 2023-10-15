@@ -4,7 +4,6 @@ import Console from "../Console/index.astro"
 import formatter from "./formatter"
 import ConsoleClient from "./Console.svelte"
 import * as cfp from "@src/data/cfp"
-import ScrollDown from './ScrollDown.astro';
 import {
   discordLink,
   ticketLink,
@@ -48,8 +47,6 @@ const data = formatter()
       <pre set:html={data} slot="data" />
     </ConsoleClient>
   </Console>
-
-  <ScrollDown />
 </section>
 
 <hr />
