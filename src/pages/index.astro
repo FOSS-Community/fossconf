@@ -10,6 +10,7 @@ import Testimonials from "./_/Testimonials/index.astro"
 import Partners from "./_/Partners/index.astro"
 import Organisers from "./_/Organisers/index.astro"
 import CallForPaper from "./_/CallForPaper.astro"
+import DiversityAndInclusion from "./_/DiversityAndInclusion.astro"
 import * as cfp from "@src/data/cfp"
 import { schedule, speakers, penelists } from "@src/data/schedules/current"
 ---
@@ -22,8 +23,9 @@ import { schedule, speakers, penelists } from "@src/data/schedules/current"
   <!-- {schedule.dates.length > 0 ? <Schedule /> : null} -->
   {speakers.length > 0 ? <Speakers /> : null}
   {penelists.length > 0 ? <Penelists /> : null}
-  <Testimonials />
   <!-- <Sponsors /> -->
+  <DiversityAndInclusion/>
+  <Testimonials />
   <Partners />
   <Organisers />
 </Layout>
