@@ -1,9 +1,11 @@
-import nikita from '../images/speakers/nikita.jpg?h=400'
-import tushar from '../images/speakers/tushar.jpeg?h=400'
-import tushars from '../images/speakers/tushars.jpg?h=400'
-import jatink from '../images/speakers/jatink.jpg?h=400'
-import shreya from '../images/speakers/shreya.png?h=400'
-import swastika from '../images/speakers/swastika.png?h=400'
+import nikita from '../images/speakers/nikita.jpg?h=400';
+import tushar from '../images/speakers/tushar.jpeg?h=400';
+import tushars from '../images/speakers/tushars.jpg?h=400';
+import jatink from '../images/speakers/jatink.jpg?h=400';
+import shreya from '../images/speakers/shreya.png?h=400';
+import swastika from '../images/speakers/swastika.png?h=400';
+import misha from '../images/speakers/Misha.jpg?h=400';
+import shruti from '../images/speakers/Shruti.jpeg?h=400';
 
 const schedule = {
   year: 2023,
@@ -21,8 +23,7 @@ const schedule = {
         },
         {
           title: 'Talk Title',
-          summary:
-            "Talk Description",
+          summary: 'Talk Description',
           startTime: '2023-11-26T10:30:00+08:00',
           endTime: '2023-11-26T11:15:00+08:00',
           track: '0',
@@ -46,8 +47,7 @@ const schedule = {
         },
         {
           title: 'Talk Title',
-          summary:
-            "Talk Description",
+          summary: 'Talk Description',
           startTime: '2023-11-26T16:30:00+08:00',
           endTime: '2023-11-26T17:15:00+08:00',
           track: '0',
@@ -65,8 +65,7 @@ const schedule = {
         },
         {
           title: 'Talk Title',
-          summary:
-            "Talk Description",
+          summary: 'Talk Description',
           startTime: '2023-11-26T16:30:00+08:00',
           endTime: '2023-11-26T17:15:00+08:00',
           track: '0',
@@ -84,8 +83,7 @@ const schedule = {
         },
         {
           title: 'Talk Title',
-          summary:
-            "Talk Description",
+          summary: 'Talk Description',
           startTime: '2023-11-26T16:30:00+08:00',
           endTime: '2023-11-26T17:15:00+08:00',
           track: '0',
@@ -103,8 +101,7 @@ const schedule = {
         },
         {
           title: 'Panel',
-          summary:
-            "Talk Description",
+          summary: 'Talk Description',
           startTime: '2023-11-26T16:30:00+08:00',
           endTime: '2023-11-26T17:15:00+08:00',
           track: '0',
@@ -125,6 +122,21 @@ const schedule = {
               position: 'Developer Advocate @Rig_dev',
               bio: 'Prev: @tursodatabase | Tweeting about Javascript, Web Development, Communities, Remote jobs, Travel',
               twitter: 'swastika0015',
+            },
+            {
+              name: 'Misha Alsner',
+              id: 'misha',
+              imgUrl: { default: misha },
+              position: 'Engineer of Kamaz and SBER',
+              bio: 'Python/C++ developer.  Engineer of Kamaz and SBER Company. Part of community Ecole 42',
+            },
+            {
+              name: 'Shruti Panjwani',
+              id: 'shruti',
+              imgUrl: { default: shruti },
+              position: ' Full-Stack Web Engineer',
+              bio: ' Full-Stack Web Engineer | Designer | Content Creator ',
+              twitter: 'shrutipanjwani_',
             },
           ],
         },
