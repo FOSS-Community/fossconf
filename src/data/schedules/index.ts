@@ -134,7 +134,7 @@ const schedule = {
               name: 'Shruti Panjwani',
               id: 'shruti',
               imgUrl: { default: shruti },
-              position: 'Wormhole w=fellow',
+              position: 'Wormhole Fellow',
               bio: 'Full-Stack Web Engineer, Designer & Content Creator',
               twitter: 'shrutipanjwani_',
             },
