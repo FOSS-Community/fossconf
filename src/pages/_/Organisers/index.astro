@@ -1,41 +1,41 @@
 ---
-import { Image } from "astro:assets"
+import { Image } from 'astro:assets';
 
-import akshat from "./images/akshat.jpg"
-import kanishk from "./images/kanishk.jpg"
-import vivek from "./images/vivek.jpg"
-import shivamy from "./images/shivamy.png"
-import mayank from "./images/mayank.jpg"
-import shivamk from "./images/shivamk.jpeg"
-import utkarsh from "./images/utkarsh.jpg"
-import anshika from "./images/anshika.jpg"
-import abhinav from "./images/abhinav.jpeg"
-import aditya from "./images/aditya.jpg"
-import vishesh from "./images/vishesh.png"
-import rohan from "./images/rohan.jpg"
-import sam from "./images/sam.jpg"
-import rishika from "./images/rishika.jpg"
-import ghanatava from "./images/ghanatava.jpeg"
-import khushi01 from "./images/khushi01.jpeg"
+import akshat from './images/akshat.jpg';
+import kanishk from './images/kanishk.jpg';
+import vivek from './images/vivek.jpg';
+import shivamy from './images/shivamy.png';
+import mayank from './images/mayank.jpg';
+import shivamk from './images/shivamk.jpeg';
+import utkarsh from './images/utkarsh.jpg';
+import anshika from './images/anshika.jpg';
+import abhinav from './images/abhinav.jpeg';
+import aditya from './images/aditya.jpg';
+import vishesh from './images/vishesh.png';
+import rohan from './images/rohan.jpg';
+import sam from './images/sam.jpg';
+import rishika from './images/rishika.jpg';
+import ghanatava from './images/ghanatava.jpeg';
+import khushi01 from './images/khushi01.jpeg';
 
 const organisers = [
-  { name: "Akshat", image: akshat },
-  { name: "Kanishk", image: kanishk },
-  { name: "Vivek", image: vivek },
-  { name: "Shivam Yadav", image: shivamy },
-  { name: "Mayank", image: mayank },
-  { name: "Shivam Kumar", image: shivamk },
-  { name: "Utkarsh", image: utkarsh },
-  { name: "Anshika", image: anshika },
-  { name: "Abhinav", image: abhinav },
-  { name: "Aditya", image: aditya },
-  { name: "Vishesh", image: vishesh },
-  { name: "Rohan", image: rohan },
-  { name: "sam", image: sam },
-  { name: "Rishika", image: rishika },
-  { name: "Ghanatava", image: ghanatava },
-  { name: "Khushi", image: khushi01 },
-]
+  { name: 'Akshat', image: akshat },
+  { name: 'Kanishk', image: kanishk },
+  { name: 'Vivek', image: vivek },
+  { name: 'Shivam Yadav', image: shivamy },
+  { name: 'Mayank', image: mayank },
+  { name: 'Shivam Kumar', image: shivamk },
+  { name: 'Utkarsh', image: utkarsh },
+  { name: 'Anshika', image: anshika },
+  { name: 'Abhinav', image: abhinav },
+  { name: 'Aditya', image: aditya },
+  { name: 'Vishesh', image: vishesh },
+  { name: 'Rohan', image: rohan },
+  { name: 'sam', image: sam },
+  { name: 'Rishika', image: rishika },
+  { name: 'Ghanatava', image: ghanatava },
+  { name: 'Khushi', image: khushi01 },
+];
 ---
 
 <section id="organisers" class="rows">
@@ -46,13 +46,15 @@ const organisers = [
     {
       organisers.map((organiser) => {
         return (
-          <div class="organiser">
-            <div class="container">
-              <Image src={organiser.image} alt={organiser.name} width={200} />
+          <a href="">
+            <div class="organiser">
+              <div class="container">
+                <Image src={organiser.image} alt={organiser.name} width={200} />
+              </div>
+              {organiser.name}
             </div>
-            {organiser.name}
-          </div>
-        )
+          </a>
+        );
       })
     }
   </div>
