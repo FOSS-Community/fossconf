@@ -22,8 +22,8 @@ html {
 
 body {
   margin: 0;
-  background: rgb(30,45,39);
-background: linear-gradient(180deg, rgba(30,45,39,1) 0%, rgba(41,48,38,1) 100%);
+  background: rgb(30, 45, 44);
+  background: linear-gradient(180deg, rgb(30, 45, 44) 0%, rgb(43, 48, 38) 100%);
   color: var(--white);
   font-family: 'Work Sans', Arial, Helvetica, sans-serif;
   font-size: 1.375rem;
