@@ -1,4 +1,4 @@
-const formatter = new Intl.DateTimeFormat('en-SG', {
+const formatter = new Intl.DateTimeFormat('en-IN', {
   dateStyle: 'full',
   timeZone: 'Asia/Kolkata',
 });
@@ -7,7 +7,7 @@ export function formatDateFull(date: string | Date) {
   return formatter.format(date);
 }
 
-const dateFormatter2 = new Intl.DateTimeFormat('en-US', {
+const dateFormatter2 = new Intl.DateTimeFormat('en-IN', {
   month: 'short',
   day: 'numeric',
   year: '2-digit',
@@ -18,7 +18,7 @@ export function formatDateLong(date: string | Date) {
   return dateFormatter2.format(date);
 }
 
-const timeFormatter = new Intl.DateTimeFormat('en-SG', {
+const timeFormatter = new Intl.DateTimeFormat('en-IN', {
   timeStyle: 'short',
   hour12: false,
   timeZone: 'Asia/Kolkata',
