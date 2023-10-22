@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { textToHtml } from '@src/utils/text-to-html';
+import { textToHtml } from '@src/utils/text-to-html.tss';
 
 import solanaLogo from './logos/solanaLogo.svg';
 import googleLogo from './logos/googleLogo.png';
@@ -24,14 +24,14 @@ const sponsors: Array<{
         link: 'https://solana.com/',
         image: solanaLogo,
         name: 'Solana Foundation',
-        description:
-          '',
+        description: '',
       },
       {
         link: "https://google.com",
         image: googleLogo,
         style: "padding:1rem;background:transparent;",
-        name: 'Google'
+        name: 'Google',
+        description: '',
       },
     ],
   },
