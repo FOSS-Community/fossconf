@@ -2,7 +2,8 @@
 import { Image } from 'astro:assets';
 import { textToHtml } from '@src/utils/text-to-html';
 
-import spedx from './logos/spedx.png';
+import solanaLogo from './logos/solanaLogo.svg';
+import googleLogo from './logos/googleLogo.png';
 
 const sponsors: Array<{
   title: string;
@@ -16,40 +17,36 @@ const sponsors: Array<{
   }>;
 }> = [
   {
-    title: 'Sponsor us!',
-    size: 100,
+    title: 'Platinium Sponsors',
+    size: 400,
     sponsors: [
       {
-        link: 'https://www.spedx.exchange/',
-        image: spedx,
-        name: 'spedX',
+        link: 'https://solana.com/',
+        image: solanaLogo,
+        name: 'Solana Foundation',
         description:
           '',
       },
-    ],
-  },
-  /*{
-    title: "Platinum Sponsor",
-    size: 600,
-    sponsors: [
-      { link: "", image: sponsorImage },
       {
-        link: "",
-        image: sponsorImage,
-        style: "padding:1rem;background:white;",
+        link: "https://google.com",
+        image: googleLogo,
+        style: "padding:1rem;background:transparent;",
+        name: 'Google'
       },
     ],
   },
-  {
-    title: "Gold Sponsor",
-    size: 450,
-    sponsors: [{ link: "", image: sponsorImage }],
-  },
-  {
-    title: "Silver Sponsor",
-    size: 300,
-    sponsors: [{ link: "", image: sponsorImage }],
-  },*/
+  // {
+  //   title: "Gold Sponsors",
+  //   size: 600,
+  //   sponsors: [
+  //     { link: "", image: googleLogo },
+  //     {
+  //       link: "",
+  //       image: googleLogo,
+  //       style: "padding:1rem;background:white;",
+  //     },
+  //   ],
+  // },
 ];
 ---
 
