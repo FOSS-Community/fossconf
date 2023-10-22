@@ -1,10 +1,17 @@
 ---
 import Layout from "@src/layouts/Layout.astro"
 import FAQpage from "./_/FAQpage.astro";
+import Logo from "@src/components/Logo.astro"
+import Line from "@src/components/hr.astro"
 ---
 
-<Layout title="Home">
-  
+<div>
+  <Line />
+</div>
+<Layout title="FAQ - FOSSConf 2023">
+  <div style="margin-bottom: 50px;">
+    <Logo />
+   </div>
   <FAQpage />
 
 </Layout>
