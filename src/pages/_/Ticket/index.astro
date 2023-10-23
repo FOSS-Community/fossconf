@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import ticket from "./ticket.png"
+import { ticketLink } from "@src/data/links"
+---
+
+<section id="ticket" class="rows">
+    <div>
+        <h2>Registration</h2>
+    </div>
+    <div>
+        <p>Get your FOSSConf23 tickets now to secure your spot at this exciting open source event! We offer two types of tickets: Normal Tickets and Student Tickets. Learn more about the benefits of each ticket and make your reservation today.</p>
+        <div style="display: flex; align-items: center;">
+            <Image src={ticket} width={40} alt="Ticket Image" />
+            <a href={ticketLink} style="margin-left: 0.5rem; font-weight: bold;">Click here to learn more and book your tickets</a>
+        </div>
+    </div>
+</section>
