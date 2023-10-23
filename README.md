@@ -8,7 +8,7 @@
 > Astro.js and Typescript.
 
 
-## Contribution Guidelines for Astro.js
+## Contribution Guidelines
 
 1. **Fork the Repository:** Start by forking the [fossconf repository](https://github.com/FOSS-Community/fossconf) to your own GitHub account.
 
