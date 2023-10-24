@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@candypay/checkout-sdk": "^0.1.57",
+    "@types/axios": "^0.14.0",
+    "axios": "^1.5.1",
+    "next": "13.5.6",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "13.5.6"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "typescript": "^5",
