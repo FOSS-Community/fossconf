@@ -4,7 +4,7 @@
 
 # FOSSConf India 2023 website
 
-> The monorepo for the FOSSConf India website, based on
+> The repo for the FOSSConf India website, based on
 > Astro.js and Typescript.
 
 
