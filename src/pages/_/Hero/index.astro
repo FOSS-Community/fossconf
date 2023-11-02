@@ -1,52 +1,67 @@
 ---
-import Line from "@src/components/hr.astro"
-import Logo from "@src/components/Logo.astro"
-import Console from "../Console/index.astro"
-import formatter from "./formatter"
-import ConsoleClient from "./Console.svelte"
-import * as cfp from "@src/data/cfp"
+import Line from '@src/components/hr.astro';
+import Logo from '@src/components/Logo.astro';
+import Console from '../Console/index.astro';
+import formatter from './formatter';
+import ConsoleClient from './Console.svelte';
+import { Image } from 'astro:assets';
+import * as cfp from '@src/data/cfp';
+import ticket from './ticket.png';
 import {
   discordLink,
   ticketLink,
   venueLink,
   venueName,
   volunteerLink,
-} from "@src/data/links"
-import { year, startDate, endDate } from "@src/data/date"
+} from '@src/data/links';
+import { year, startDate, endDate } from '@src/data/date';
 
-const format = new Intl.DateTimeFormat("default", {
-  dateStyle: "medium",
-  timeStyle: "short",
-  timeZone: "Asia/Kolkata",
-})
-
+const format = new Intl.DateTimeFormat('default', {
+  dateStyle: 'medium',
+  timeStyle: 'short',
+  timeZone: 'Asia/Kolkata',
+});
 const data = formatter()
-  .addEntry("title", `FOSSConf ${year}`)
-  .addEntry("startDate", startDate ? `${format.format(startDate)}` : "TBC")
-  .addEntry("endDate", endDate ? `${format.format(endDate)}` : "TBC")
-  .addEntry("support", `<a href="${discordLink}">Discord</a>`)
-  .addEntry("registration", `<a href="${ticketLink}">Register Here!</a>`, true)
-  .addEntry("volunteer", `<a href="https://airtable.com/appyqESu1jTLyRj5b/shrADLMpduaaLPS9R">Apply now!</a>`)
+  .addEntry('title', `FOSSConf ${year}`)
+  .addEntry('startDate', startDate ? `${format.format(startDate)}` : 'TBC')
+  .addEntry('endDate', endDate ? `${format.format(endDate)}` : 'TBC')
+  .addEntry('support', `<a href="${discordLink}">Discord</a>`)
+  .addEntry('registration', `<a href="${ticketLink}">Register Here!</a>`, true)
   .addEntry(
-    "cfp",
-    +Date.now() > +cfp.deadline
-      ? "CFP is now closed."
-      : `<a href="https://sessionize.com/fossconf-2023/">Submit Now!</a>`
+    'volunteer',
+    `<a href="https://airtable.com/appyqESu1jTLyRj5b/shrADLMpduaaLPS9R">Apply now!</a>`,
   )
-  .addEntry("description", "An event immersed in the open-source ambiance.")
-  .toString()
+  .addEntry(
+    'cfp',
+    +Date.now() > +cfp.deadline
+      ? 'CFP is now closed.'
+      : `<a href="https://sessionize.com/fossconf-2023/">Submit Now!</a>`,
+  )
+  .addEntry('description', 'An event immersed in the open-source ambiance.')
+  .toString();
 ---
 
 <Line />
 
-<section>
-  <Logo />
-
-  <Console>
-    <ConsoleClient client:idle>
-      <pre set:html={data} slot="data" />
-    </ConsoleClient>
-  </Console>
+<section class="container">
+  <div>
+    <Logo />
+    <Console>
+      <ConsoleClient client:idle>
+        <pre set:html={data} slot="data" />
+      </ConsoleClient>
+    </Console>
+  </div>
+  <div class="announcement">
+    <div class="announcement-content">
+      <code class="animated-message"
+        ><a href="/tickets">Tickets are live!</a>
+      </code>
+      <a href="/tickets">
+        <Image src={ticket} alt="Ticket Image" class="ticket-image" />
+      </a>
+    </div>
+  </div>
 </section>
 <div style="margin-bottom: 50px;">
   <Line />
@@ -59,5 +74,87 @@ const data = formatter()
   }
   hr:nth-of-type(2) {
     margin-bottom: 3.5rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .announcement {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .announcement-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .animated-message {
+    animation: slideInText 1s ease-in-out;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .ticket-image {
+    width: 250px;
+    height: auto;
+    animation: pendulum 2s ease-in-out infinite;
+    transform-origin: top;
+  }
+  .ticket-link:hover {
+    text-decoration: underline;
+  }
+
+  @keyframes slideInText {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes pendulum {
+    0% {
+      transform: rotate(5deg);
+    }
+    50% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(5deg);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .container {
+      display: block;
+    }
+    .announcement-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .animated-message {
+    animation: slideInText 1s ease-in-out;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+    
+    .ticket-image {
+      width: 150px;
+      height: auto;
+    }
+   
+    .announcement {
+      margin-top: 20px;
+    }
   }
 </style>
