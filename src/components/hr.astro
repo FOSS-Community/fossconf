@@ -1,17 +1,48 @@
 ---
 ---
 
-<div class="hr">
-<hr />
+<div class="hr hr-left">
+  <hr />
 </div>
 
 <style>
-  hr {
-    width: 100%;
-    background: url("/images/bgsquare.svg") repeat-x;
-    height: 20px;
-    outline: 0;
-    border: none;
-    margin: 0;
+  @keyframes growFromLeft {
+  0% {
+    width: 0;
   }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes growFromRight {
+  0% {
+    width: 0;
+    left: 100%;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.hr-left hr {
+  animation: growFromLeft 1s ease-in-out forwards;
+}
+
+.hr-right hr {
+  position: relative;
+  animation: growFromRight 1s ease-in-out forwards;
+}
+
+hr {
+  width: 0; /* Start with width 0 to see the animation */
+  background: url("/images/bgsquare.svg") repeat-x;
+  height: 20px;
+  outline: 0;
+  border: none;
+  margin: 0;
+  animation: growFromLeft 2s ease-in-out forwards;
+}
+
 </style>

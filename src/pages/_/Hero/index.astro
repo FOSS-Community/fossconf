@@ -9,10 +9,7 @@ import * as cfp from '@src/data/cfp';
 import ticket from './ticket.png';
 import {
   discordLink,
-  ticketLink,
-  venueLink,
-  venueName,
-  volunteerLink,
+  ticketLink
 } from '@src/data/links';
 import { year, startDate, endDate } from '@src/data/date';
 
@@ -26,7 +23,7 @@ const data = formatter()
   .addEntry('startDate', startDate ? `${format.format(startDate)}` : 'TBC')
   .addEntry('endDate', endDate ? `${format.format(endDate)}` : 'TBC')
   .addEntry('support', `<a href="${discordLink}">Discord</a>`)
-  .addEntry('registration', `<a href="${ticketLink}">Register Here!</a>`, true)
+  .addEntry('registration', `<a href="${ticketLink}">Register Here!</a>`,)
   .addEntry(
     'volunteer',
     `<a href="https://airtable.com/appyqESu1jTLyRj5b/shrADLMpduaaLPS9R">Apply now!</a>`,
@@ -143,16 +140,16 @@ const data = formatter()
       align-items: center;
     }
     .animated-message {
-    animation: slideInText 1s ease-in-out;
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-    
+      animation: slideInText 1s ease-in-out;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
     .ticket-image {
       width: 150px;
       height: auto;
     }
-   
+
     .announcement {
       margin-top: 20px;
     }
