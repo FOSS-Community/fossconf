@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import { textToHtml } from '@src/utils/text-to-html.ts';
 import solanaLogo from './logos/solanaLogo.svg';
 import googleLogo from './logos/googleLogo.png';
+import xyzLogo from './logos/Vector.svg';
 
 const sponsors: Array<{
   title: string;
@@ -26,10 +27,22 @@ const sponsors: Array<{
         description: '',
       },
       {
-        link: "https://google.com",
+        link: 'https://google.com',
         image: googleLogo,
-        style: "padding:1rem;background:transparent;",
+        style: 'padding:1rem;background:transparent;',
         name: 'Google',
+        description: '',
+      },
+    ],
+  },
+  {
+    title: 'In Kind Donation Sponsors',
+    size: 400,
+    sponsors: [
+      {
+        link: 'https://gen.xyz/',
+        image: xyzLogo,
+        name: '.xyz',
         description: '',
       },
     ],
