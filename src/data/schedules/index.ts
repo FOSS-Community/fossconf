@@ -94,7 +94,7 @@ const schedule = {
               id: 'jatink',
               imgUrl: { default: jatink },
               position: 'Principle SE @Atlassian',
-              bio: 'Nikita Sobolev, a versatile CTO, mentor, and advocate for open source, with a passion for spreading knowledge and organizing conferences',
+              bio: 'Principle SE @Atlassian, Previous Positions: Software Architect at Uber, Lead Software Engineer at Uber, SDE III at Synaptic, SDE II at Shuttl and SDE at Adobe.',
               twitter: 'jatinkrmalik',
             },
           ],

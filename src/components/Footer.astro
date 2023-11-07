@@ -1,38 +1,40 @@
 ---
 import { Image } from 'astro:assets';
 
-import { year } from "@src/data/date"
-import Logo from "./fossconf.svg"
+import { year } from '@src/data/date';
+import Logo from './fossconf.svg';
 
 const links = [
-  { href: "/discord", title: "Discord" },
-  { href: "https://twitter.com/fosscuk", title: "Twitter" },
-  { href: "https://www.instagram.com/fosscuk", title: "Instagram" },
-  { href: "https://github.com/fosscu-community", title: "GitHub" },
-]
+  { href: '/discord', title: 'Discord' },
+  { href: 'https://twitter.com/fosscuk', title: 'Twitter' },
+  { href: 'https://www.instagram.com/fosscuk', title: 'Instagram' },
+  { href: 'https://github.com/fosscu-community', title: 'GitHub' },
+];
 
 const readmore = [
-  { href: "https://fosscu.org/", title: "fosscu.org" },
   {
-    href: "https://docs.fosscu.org/",
-    title: "About FOSSCU",
+    href: 'https://docs.fosscu.org/',
+    title: 'About FOSSCU',
   },
-  { href: "https://github.com/FOSS-Community/", title: "Contribute" },
-  { href: "https://lu.ma/fosscu", title: "Calendar" },
-]
+  { href: 'https://fosscu.org/home', title: 'fosscu.org' },
+  { href: 'https://github.com/FOSS-Community/', title: 'Contribute' },
+  { href: 'https://lu.ma/fosscu', title: 'Calendar' },
+];
 
 const codeofcoduct = [
-  { href: "/coc", title: "Code Of Conduct" },
+{ href: '/diversity', title: 'Diversity at FOSSConf' },
+  { href: '/faq', title: 'FAQ' },
+  { href: '/coc', title: 'Code Of Conduct' },
   {
-    href: "https://docs.fosscu.org/Docs/values",
-    title: "Core Values",
+    href: 'https://docs.fosscu.org/Docs/values',
+    title: 'Core Values',
   },
-]
+];
 ---
 
 <div class="footer">
   <div>
-    <h4 style="color: var(--yellow);">FOSSCU</h4>
+    <h4 style="color: var(--yellow);">Connect</h4>
     <ul>
       {
         links.map(({ href, title }) => (
@@ -46,14 +48,14 @@ const codeofcoduct = [
     </ul>
   </div>
   <div>
-    <h4 style="color: var(--green)">Read More</h4>
+    <h4 style="color: var(--green)">What is FOSSCU</h4>
     <ul>
       {
         readmore.map(({ href, title }) => (
           <li>
             <a
               href={href}
-              target={href.startsWith("https://") ? "_blank" : "_self"}
+              target={href.startsWith('https://') ? '_blank' : '_self'}
               rel="noreferrer noopener"
             >
               {title}
@@ -64,14 +66,14 @@ const codeofcoduct = [
     </ul>
   </div>
   <div>
-    <h4 style="color: var(--red)">Code Of Coduct</h4>
+    <h4 style="color: var(--red)">Read More</h4>
     <ul>
       {
         codeofcoduct.map(({ href, title }) => (
           <li>
             <a
               href={href}
-              target={href.startsWith("https://") ? "_blank" : "_self"}
+              target={href.startsWith('https://') ? '_blank' : '_self'}
               rel="noreferrer noopener"
             >
               {title}
@@ -83,7 +85,7 @@ const codeofcoduct = [
   </div>
   <div class="branding">
     <Image src={Logo} alt={`FOSSConf India ${year}`} />
-    <div class="copyright">Copyright &copy; {year}. All rights reserved.</div>
+    <div class="copyright">Proudly Open Source</div>
   </div>
 </div>
 

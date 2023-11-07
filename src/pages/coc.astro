@@ -1,10 +1,16 @@
 ---
 import Layout from "@src/layouts/Layout.astro"
 import CodeOfConduct from "./_/CodeOfConduct.astro"
+import Logo from "@src/components/Logo.astro"
+import Line from "@src/components/hr.astro"
 ---
-
-<Layout title="Home">
-  
+<div>
+  <Line />
+</div>
+<Layout title="Code of Conduct">
+  <div style="margin-bottom: 50px;">
+   <Logo />
+  </div>
   <CodeOfConduct />
 
 </Layout>
