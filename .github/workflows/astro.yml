@@ -1,4 +1,4 @@
-name: Deploy Astro site to Pages
+name: build
 
 on:
   push:
@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  BUILD_PATH: "." # default value when not using subfolders
+  BUILD_PATH: "."
 
 jobs:
   build:
@@ -29,7 +29,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-          cache: 'pnpm' # Specify pnpm for caching
+          cache: 'pnpm'
 
       - name: Install dependencies with pnpm
         run: pnpm install
