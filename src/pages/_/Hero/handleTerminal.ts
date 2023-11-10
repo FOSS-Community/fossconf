@@ -8,7 +8,7 @@ import {
   volunteerLink,
 } from '@src/data/links';
 import { formatDateFull } from '@src/utils/date-format';
-import { speakers } from '@src/data/schedules/current';
+import { speakers } from '@src/data/schedules/speakers';
 
 const cmdWithoutArg = [
   'help',

@@ -1,9 +1,9 @@
 <script>
   import { onMount } from 'svelte';
 
-  import Penelist from './Penelist.svelte';
+  import Keynote from './Keynote.svelte';
 
-  export let penelists;
+  export let keynote;
   let focus = undefined;
 
   onMount(() => {
@@ -12,7 +12,7 @@
 
     function onHashChange() {
       const name = window.location.hash.slice(1);
-      if (penelists.find((penelist) => penelist.id === name)) {
+      if (keynote.find((keynote) => keynote.id === name)) {
         toSet = name;
         timeoutId = setTimeout(updateFocus, 200);
       } else {
@@ -44,10 +44,10 @@
   });
 </script>
 
-{#each penelists as penelist}
-  <Penelist
-    {...penelist}
-    focused={focus === penelist.id}
+{#each keynote as keynote}
+  <Keynote
+    {...keynote}
+    focused={focus === keynote.id}
     on:focus={(event) => (focus = event.detail)}
   />
 {/each}

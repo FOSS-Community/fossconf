@@ -28,7 +28,7 @@ const schedule = {
           endTime: '2023-11-26T11:15:00+08:00',
           track: '0',
           id: 'talk-1',
-          speakers: [
+          keynote: [
             {
               name: 'Nikita Sobolev',
               id: 'nikita',
@@ -52,7 +52,7 @@ const schedule = {
           endTime: '2023-11-26T17:15:00+08:00',
           track: '0',
           id: 'talk-2',
-          speakers: [
+          keynote: [
             {
               name: 'Tushar Sadhwani',
               id: 'tushars',
@@ -70,7 +70,7 @@ const schedule = {
           endTime: '2023-11-26T17:15:00+08:00',
           track: '0',
           id: 'talk-3',
-          speakers: [
+          keynote: [
             {
               name: 'Tushar Gupta',
               id: 'tushar',
@@ -88,7 +88,7 @@ const schedule = {
           endTime: '2023-11-26T17:15:00+08:00',
           track: '0',
           id: 'talk-4',
-          speakers: [
+          keynote: [
             {
               name: 'Jatin K Malik',
               id: 'jatink',
@@ -106,7 +106,7 @@ const schedule = {
           endTime: '2023-11-26T17:15:00+08:00',
           track: '0',
           id: 'talk-title',
-          penelists: [
+          panelists: [
             {
               name: 'Shreya Prasad',
               id: 'shreya',
@@ -145,14 +145,14 @@ const schedule = {
   ],
 };
 
-const speakers = schedule.dates.flatMap((date) =>
+const keynote = schedule.dates.flatMap((date) =>
   date.talks
-    .flatMap((talk) => talk.speakers ?? [])
+    .flatMap((talk) => talk.keynote ?? [])
     .sort((a, b) => (a.name > b.name ? 1 : -1)),
 );
-const penelists = schedule.dates.flatMap((date) =>
+const panelists = schedule.dates.flatMap((date) =>
   date.talks
-    .flatMap((talk) => talk.penelists ?? [])
+    .flatMap((talk) => talk.panelists ?? [])
     .sort((a, b) => (a.name > b.name ? 1 : -1)),
 );
 const tracks = Array.from(
@@ -163,4 +163,4 @@ const tracks = Array.from(
   ),
 );
 
-export { schedule, speakers, penelists, tracks };
+export { schedule, panelists, keynote, tracks };
