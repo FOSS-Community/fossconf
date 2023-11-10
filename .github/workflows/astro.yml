@@ -7,15 +7,7 @@ on:
 
 permissions:
   contents: read
-  pages: write
   id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-env:
-  BUILD_PATH: "."
 
 jobs:
   build:
@@ -29,20 +21,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-          cache: 'pnpm'
+          cache: 'npm'
 
-      - name: Install dependencies with pnpm
-        run: pnpm install
+      - name: Install dependencies with npm
+        run: npm ci
         working-directory: ${{ env.BUILD_PATH }}
 
       - name: Build with Astro
         run: |
-          pnpm run build \
-            --site "${{ steps.pages.outputs.origin }}" \
-            --base "${{ steps.pages.outputs.base_path }}"
+          npm run build
         working-directory: ${{ env.BUILD_PATH }}
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ${{ env.BUILD_PATH }}/dist
