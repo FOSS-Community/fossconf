@@ -1,20 +1,18 @@
 ---
 import { Image } from 'astro:assets';
 
-import Web3commune from './logos/web3commune.png';
-import AssetMantle from './logos/assetmantle.svg'
+import Ocd from './logos/ocd.png';
+import AssetMantle from './logos/assetmantle.svg';
 
 const partners: any[] = [
   {
-    name: 'Web3commune',
-    images: Web3commune,
-    width: 420,
-    link: '/',
+    name: 'OCD',
+    images: Ocd,
+    link: 'https://ocd-india.github.io/',
   },
   {
     name: 'AssetMantle',
     images: AssetMantle,
-    width: 420,
     link: 'https://www.assetmantle.one/',
   },
 ];
@@ -27,8 +25,8 @@ const partners: any[] = [
         <h2>Community Partners</h2>
       </div>
       <div class="partners">
-        {partners.map(({ name, images,width,  link }) => (
-          <a href={link}>
+        {partners.map(({ name, images, width, link }) => (
+          <a href={link} class="partner-item">
             <Image src={images} width={width} alt={name} />
           </a>
         ))}
@@ -37,18 +35,19 @@ const partners: any[] = [
   ) : null
 }
 
-
-
 <style>
   h2 {
     --stroke-color: var(--red);
   }
   .partners {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 1rem;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+  }
+  .partner-item {
+    margin-bottom: 1rem; /* Add some margin between logos */
   }
   @media screen and (min-width: 768px) {
     .partners {
@@ -62,6 +61,9 @@ const partners: any[] = [
   }
   img {
     margin: 0;
+    height: fit-content;
     max-width: 100%;
+    width: fit-content;
   }
 </style>
+
