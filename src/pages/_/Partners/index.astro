@@ -8,11 +8,13 @@ const partners: any[] = [
   {
     name: 'Web3commune',
     images: Web3commune,
+    width: 420,
     link: '/',
   },
   {
     name: 'AssetMantle',
     images: AssetMantle,
+    width: 420,
     link: '/',
   },
 ];
@@ -25,38 +27,41 @@ const partners: any[] = [
         <h2>Community Partners</h2>
       </div>
       <div class="partners">
-        {partners.map(({ name, images,  link }) => (
+        {partners.map(({ name, images,width,  link }) => (
           <a href={link}>
-            <Image src={images} alt={name} />
+            <Image src={images} width={width} alt={name} />
           </a>
         ))}
       </div>
     </section>
   ) : null
 }
+
+
+
 <style>
   h2 {
     --stroke-color: var(--red);
   }
   .partners {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 1.5rem;
   }
   @media screen and (min-width: 768px) {
     .partners {
-      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: space-between;
     }
   }
-
   @media screen and (min-width: 960px) {
     .partners {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      justify-content: space-between;
     }
   }
   img {
     margin: 0;
-    width: 100%;
-    height: fit-content;
+    max-width: 100%;
   }
 </style>
