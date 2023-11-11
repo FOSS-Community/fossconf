@@ -1,21 +1,23 @@
 ---
-import { Image } from "astro:assets"
+import { Image } from 'astro:assets';
 
-// import Superteam from "./logos/superteam.webp"
-// import image from "./logos/image.png"
+import Web3commune from './logos/web3commune.png';
+import AssetMantle from './logos/assetmantle.svg'
 
 const partners: any[] = [
-  // {
-  //   name: 'Superteam',
-  //   images: [Superteam],
-  //   link: 'https://google.com/',
-  // },
-  // {
-  //   name: 'Fosscu',
-  //   images: [foss, foss_2x],
-  //   link: 'https://www.fosscu.org/',
-  // },
-]
+  {
+    name: 'Web3commune',
+    images: Web3commune,
+    width: 420,
+    link: '/',
+  },
+  {
+    name: 'AssetMantle',
+    images: AssetMantle,
+    width: 420,
+    link: 'https://www.assetmantle.one/',
+  },
+];
 ---
 
 {
@@ -25,9 +27,9 @@ const partners: any[] = [
         <h2>Community Partners</h2>
       </div>
       <div class="partners">
-        {partners.map(({ name, images: [img1x, img2x], link }) => (
+        {partners.map(({ name, images,width,  link }) => (
           <a href={link}>
-            <Image src={img1x} alt={name} />
+            <Image src={images} width={width} alt={name} />
           </a>
         ))}
       </div>
@@ -35,30 +37,31 @@ const partners: any[] = [
   ) : null
 }
 
+
+
 <style>
   h2 {
     --stroke-color: var(--red);
   }
   .partners {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 1.5rem;
   }
   @media screen and (min-width: 768px) {
     .partners {
-      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: space-between;
     }
   }
-
   @media screen and (min-width: 960px) {
     .partners {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      justify-content: space-between;
     }
   }
-
   img {
     margin: 0;
-    width: 100%;
-    height: fit-content;
+    max-width: 100%;
   }
 </style>
