@@ -1,0 +1,117 @@
+---
+import { Image } from 'astro:assets';
+
+import Divv from './images/Divv.jpeg';
+import Aashima from './images/Aashima.jpeg';
+import Amisha from './images/Amisha.jpeg';
+import Akaash from './images/Akaash.jpeg';
+import ananya from './images/ananya.png';
+import Antonio from './images/Antonio.jpeg';
+import Anuj from './images/Anuj.png';
+import Anurag from './images/Anurag.jpeg';
+import Atharva from './images/Atharva.jpeg';
+import Devansh from './images/Devansh.jpeg';
+import harsh from './images/harsh.jpeg';
+import Himanshu from './images/Himanshu.jpeg';
+import Kanishka from './images/Kanishka.jpeg';
+import Manish from './images/Manish.jpeg';
+import Mridula from './images/Mridula.jpeg';
+import Nimish from './images/Nimish.jpeg';
+import Paarth from './images/Paarth.jpeg';
+import palak from './images/palak.jpeg';
+import pratyush from './images/pratyush.jpeg';
+import purva from './images/purva.jpeg';
+import riya from './images/riya.jpeg';
+import Saptarshi from './images/Saptarshi.jpeg';
+import unnati from './images/unnati.png';
+import Vikshita from './images/Vikshita.jpeg';
+
+const organisers = [
+  { name: 'Divv', image: Divv },
+  { name: 'Aashima', image: Aashima },
+  { name: 'Amisha', image: Amisha },
+  { name: 'Akaash', image: Akaash },
+  { name: 'ananya', image: ananya },
+  { name: 'Antonio', image: Antonio },
+  { name: 'Anuj', image: Anuj },
+  { name: 'Anurag', image: Anurag },
+  { name: 'Atharva', image: Atharva },
+  { name: 'Devansh', image: Devansh },
+  { name: 'harsh', image: harsh },
+  { name: 'Himanshu', image: Himanshu },
+  { name: 'Kanishka', image: Kanishka },
+  { name: 'Manish', image: Manish },
+  { name: 'Mridula', image: Mridula },
+  { name: 'Nimish', image: Nimish },
+  { name: 'Paarth', image: Paarth },
+  { name: 'palak', image: palak },
+  { name: 'pratyush', image: pratyush },
+  { name: 'purva', image: purva },
+  { name: 'riya', image: riya },
+  { name: 'Saptarshi', image: Saptarshi },
+  { name: 'unnati', image: unnati },
+  { name: 'Vikshita', image: Vikshita },
+];
+---
+
+<section id="organisers" class="rows">
+  <div>
+    <h2>Volunteers</h2>
+  </div>
+  <div class="grid">
+    {
+      organisers.map((organiser) => {
+        return (
+          <a href="">
+            <div class="organiser">
+              <div class="container">
+                <Image src={organiser.image} alt={organiser.name} width={200} />
+              </div>
+              {organiser.name}
+            </div>
+          </a>
+        );
+      })
+    }
+  </div>
+</section>
+
+<style>
+  h2 {
+    --stroke-color: var(--yellow);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  @media screen and (min-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  @media screen and (min-width: 900px) {
+    .grid {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .organiser {
+    text-align: center;
+  }
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+  }
+</style>

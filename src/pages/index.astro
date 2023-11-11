@@ -11,6 +11,7 @@ import Sponsors from "./_/Sponsors/index.astro"
 import Ticket from "./_/Ticket/index.astro"
 import Partners from "./_/Partners/index.astro"
 import Organisers from "./_/Organisers/index.astro"
+import Volunteers from "./_/Volunteers/index.astro"
 import External from "../components/external.svg"
 import { schedule, panelists, keynote } from "@src/data/schedules/current"
 ---
@@ -27,6 +28,7 @@ import { schedule, panelists, keynote } from "@src/data/schedules/current"
   <!-- {Array.isArray(schedule.dates) && schedule.dates.length > 0 ? <Schedule /> : null} -->
   <Testimonials />
   <Organisers />
+  <Volunteers />
 </Layout>
 
 <style>
