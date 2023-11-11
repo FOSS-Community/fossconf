@@ -48,7 +48,123 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
 | `npm run astro --help` | Get help using the Astro CLI                       |
 
-## 👀 Want to learn more?
 
-Feel free to check [Astro.js documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
+## directories structure
+.
+├── astro.config.mjs
+├── bun.lockb
+├── netlify.toml
+├── package.json
+├── public
+│   ├── favicon.png
+│   ├── fossconf-dark.svg
+│   ├── fossconf-green.png
+│   ├── images
+│   │   ├── bgsquare.svg
+│   │   └── iiitdelhi.svg
+│   └── manifest.webmanifest
+├── README.md
+├── src
+│   ├── components
+│   │   ├── external.svg
+│   │   ├── Footer.astro
+│   │   :
+│   ├── data
+│   │   ├── cfp.ts
+│   │   ├── date.ts
+│   │   ├── images
+│   │   │   ├── speakers
+│   │   │   │   ├── nikita.jpg
+│   │   │   │   ├── shreya.png
+│   │   │   │   ├── Shruti.jpeg
+│   │   │   │   :
+│   │   │   └── sponsors
+│   │   │       ├── microsoft.png
+│   │   │       :
+│   │   ├── links.ts
+│   │   └── schedules
+│   │       ├── current.ts
+│   │       ├── index.ts
+│   │       └── speakers.ts
+│   ├── env.d.ts
+│   ├── layouts
+│   │   ├── globals.css
+│   │   └── Layout.astro
+│   ├── pages
+│   │   ├── _
+│   │   │   ├── About.astro
+│   │   │   ├── CallForPaper.astro
+│   │   │   ├── CodeOfConduct.astro
+│   │   │   ├── Console
+│   │   │   │   ├── Code.astro
+│   │   │   │   ├── Controls.astro
+│   │   │   │   └── index.astro
+│   │   │   ├── Diversity.astro
+│   │   │   ├── FAQpage.astro
+│   │   │   ├── Hero
+│   │   │   │   ├── Console.svelte
+│   │   │   │   :
+│   │   │   ├── Keynotes
+│   │   │   │   ├── index.astro
+│   │   │   │   ├── Keynotes.svelte
+│   │   │   │   └── Keynote.svelte
+│   │   │   ├── Live
+│   │   │   │   └── index.astro
+│   │   │   ├── Organisers
+│   │   │   │   ├── images
+│   │   │   │   │   ├── abhinav.jpeg
+│   │   │   │   │   ├── aditya.jpg
+│   │   │   │   │   ├── akshat.jpg
+│   │   │   │   │   :
+│   │   │   │   └── index.astro
+│   │   │   ├── Panelists
+│   │   │   │   ├── index.astro
+│   │   │   │   ├── Panelists.svelte
+│   │   │   │   └── Panelist.svelte
+│   │   │   ├── Partners
+│   │   │   │   ├── index.astro
+│   │   │   │   └── logos
+│   │   │   │       └── superteam.webp
+│   │   │   ├── Schedule
+│   │   │   │   ├── _
+│   │   │   │   │   └── Schedules.svelte
+│   │   │   │   ├── index.astro
+│   │   │   │   └── schedule.astro
+│   │   │   ├── Speakers
+│   │   │   │   ├── index.astro
+│   │   │   │   ├── speakers.astro
+│   │   │   │   ├── Speakers.svelte
+│   │   │   │   └── Speaker.svelte
+│   │   │   ├── Sponsors
+│   │   │   │   ├── index.astro
+│   │   │   │   └── logos
+│   │   │   │       ├── googleLogo.png
+│   │   │   │       ├── solanaLogo.svg
+│   │   │   │       └── Vector.svg
+│   │   │   ├── Testimonials
+│   │   │   │   ├── index.astro
+│   │   │   │   ├── Tweet.astro
+│   │   │   │   └── Tweets.astro
+│   │   │   ├── Ticket
+│   │   │   │   ├── index.astro
+│   │   │   │   └── ticket.png
+│   │   │   ├── Tickets.astro
+│   │   │   ├── venue.astro
+│   │   │   └── Volunteers
+│   │   │       ├── images
+│   │   │       │   ├── Aashima.jpeg
+│   │   │       │   ├── Akaash.jpeg
+│   │   │       │   :
+│   │   │       └── index.astro
+│   │   ├── 404.astro
+│   │   ├── coc.astro
+│   │   ├── discord.astro
+│   │   ├── diversity.astro
+│   │   ├── faq.astro
+│   │   ├── index.astro
+│   │   :
+│   └── utils
+│       ├── date-format.ts
+│       ├── prefer-reduced-motion.ts
+│       └── text-to-html.ts
+└── tsconfig.json
