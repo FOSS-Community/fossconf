@@ -1,12 +1,11 @@
 ---
 import Schedules from './_/Schedules.svelte';
-import { schedule, tracks } from '@src/data/schedules/current';
-import { gridUrl } from '@src/data/schedules/speakers';
+import { schedule, tracks } from '@src/data/schedules/speakers';
 import { formatDateLong } from '@src/utils/date-format';
 ---
 
 {
-  schedule.dates.map((date) => {
+  schedule.dates.map((date: { date: string | Date; talks: any; }) => {
     return (
       <section id="schedule" class="rows">
         <>
@@ -16,13 +15,6 @@ import { formatDateLong } from '@src/utils/date-format';
           <div>
             <p>
               Time shown is in IST (+5:30).
-              {gridUrl ? (
-                <>
-                  <a href={gridUrl}>View in a grid</a>.
-                </>
-              ) : (
-                ''
-              )}
             </p>
             <Schedules
               scheduleTalks={date.talks}
