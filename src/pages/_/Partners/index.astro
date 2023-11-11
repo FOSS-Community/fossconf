@@ -1,21 +1,17 @@
 ---
-import { Image } from "astro:assets"
+import { Image } from 'astro:assets';
 
-// import Superteam from "./logos/superteam.webp"
-// import image from "./logos/image.png"
+import Web3commune from './logos/web.png';
 
 const partners: any[] = [
-  // {
-  //   name: 'Superteam',
-  //   images: [Superteam],
-  //   link: 'https://google.com/',
-  // },
-  // {
-  //   name: 'Fosscu',
-  //   images: [foss, foss_2x],
-  //   link: 'https://www.fosscu.org/',
-  // },
-]
+  {
+    name: 'Web3commune',
+    images: Web3commune,
+    width: 480,
+    height: 60,
+    link: '/',
+  },
+];
 ---
 
 {
@@ -25,11 +21,13 @@ const partners: any[] = [
         <h2>Community Partners</h2>
       </div>
       <div class="partners">
-        {partners.map(({ name, images: [img1x, img2x], link }) => (
-          <a href={link}>
-            <Image src={img1x} alt={name} />
-          </a>
-        ))}
+        {partners.map(
+          ({ name, images, width, height, link }) => (
+            <a href={link}>
+              <Image src={images}  width={width} height={height} alt={name} />
+            </a>
+          ),
+        )}
       </div>
     </section>
   ) : null
@@ -58,7 +56,5 @@ const partners: any[] = [
 
   img {
     margin: 0;
-    width: 100%;
-    height: fit-content;
   }
 </style>
