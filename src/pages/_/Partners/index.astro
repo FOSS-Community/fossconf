@@ -1,23 +1,20 @@
 ---
 import { Image } from "astro:assets"
 
-import Google from "./logos/google.png"
-import Microdoft from "./logos/Microsoft.png"
+// import Superteam from "./logos/superteam.webp"
 // import image from "./logos/image.png"
 
 const partners: any[] = [
-  /*
-  {
-    name: 'Google',
-    images: [Google, Google_2x],
-    link: 'https://google.com/',
-  },
-  {
-    name: 'Fosscu',
-    images: [foss, foss_2x],
-    link: 'https://www.fosscu.org/',
-  },
-  */
+  // {
+  //   name: 'Superteam',
+  //   images: [Superteam],
+  //   link: 'https://google.com/',
+  // },
+  // {
+  //   name: 'Fosscu',
+  //   images: [foss, foss_2x],
+  //   link: 'https://www.fosscu.org/',
+  // },
 ]
 ---
 
@@ -25,7 +22,7 @@ const partners: any[] = [
   partners.length > 0 ? (
     <section id="partners" class="rows">
       <div>
-        <h2>Partners</h2>
+        <h2>Community Partners</h2>
       </div>
       <div class="partners">
         {partners.map(({ name, images: [img1x, img2x], link }) => (
@@ -62,6 +59,6 @@ const partners: any[] = [
   img {
     margin: 0;
     width: 100%;
-    max-width: 100%;
+    height: fit-content;
   }
 </style>
