@@ -1,15 +1,12 @@
 import { textToHtml } from '@src/utils/text-to-html';
 
 const sessionizeScheduleUrl =
-  'https://sessionize.com/api/v2/nwcu1hfs/view/GridSmart';
+  'https://sessionize.com/api/v2/956d1por/view/GridSmart';
 const sessionizeSchedule = await (await fetch(sessionizeScheduleUrl)).json();
 
 const sessionizeSpeakersUrl =
-  'https://sessionize.com/api/v2/nwcu1hfs/view/Speakers';
+  'https://sessionize.com/api/v2/956d1por/view/Speakers';
 const sessionizeSpeakers = await (await fetch(sessionizeSpeakersUrl)).json();
-
-const gridUrl =
-  'https://sessionize.com/view/';
 
 const speakers = sessionizeSpeakers
   .filter((speaker: { fullName: string | string[]; }) => !speaker.fullName.includes('Nikita Sobolev'))
@@ -67,5 +64,5 @@ const tracks = Array.from(
   ),
 );
 
-export { schedule, speakers, tracks, gridUrl };
+export { schedule, speakers, tracks };
 
