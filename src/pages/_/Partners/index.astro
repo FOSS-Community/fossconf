@@ -1,14 +1,18 @@
 ---
 import { Image } from 'astro:assets';
 
-import Web3commune from './logos/web.png';
+import Web3commune from './logos/web3.png';
+import AssetMantle from './logos/assetmantle.png';
 
 const partners: any[] = [
   {
     name: 'Web3commune',
     images: Web3commune,
-    width: 480,
-    height: 60,
+    link: '/',
+  },
+  {
+    name: 'AssetMantle',
+    images: AssetMantle,
     link: '/',
   },
 ];
@@ -21,18 +25,15 @@ const partners: any[] = [
         <h2>Community Partners</h2>
       </div>
       <div class="partners">
-        {partners.map(
-          ({ name, images, width, height, link }) => (
-            <a href={link}>
-              <Image src={images}  width={width} height={height} alt={name} />
-            </a>
-          ),
-        )}
+        {partners.map(({ name, images,  link }) => (
+          <a href={link}>
+            <Image src={images} alt={name} />
+          </a>
+        ))}
       </div>
     </section>
   ) : null
 }
-
 <style>
   h2 {
     --stroke-color: var(--red);
@@ -53,8 +54,9 @@ const partners: any[] = [
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
-
   img {
     margin: 0;
+    width: 100%;
+    height: fit-content;
   }
 </style>
