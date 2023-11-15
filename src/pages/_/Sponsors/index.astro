@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import { textToHtml } from '@src/utils/text-to-html.ts';
 import solanaLogo from './logos/solanaLogo.svg';
 import googleLogo from './logos/googleLogo.png';
+import wormholeWhite from './logos/WormholeWhite.svg'
 import xyzLogo from './logos/Vector.svg';
 
 const sponsors: Array<{
@@ -18,14 +19,27 @@ const sponsors: Array<{
 }> = [
   {
     title: 'Platinium Sponsors',
-    size: 400,
+    size: 600,
     sponsors: [
       {
         link: 'https://solana.com/',
         image: solanaLogo,
         name: 'Solana Foundation',
-        description: '',
+        description: 'A blockchain platform with high scalablity while keeping costs low.',
       },
+      {
+        link: 'https://wormhole.com',
+        image: wormholeWhite,
+        style: 'padding:1rem;background:transparent;',
+        name: 'Wormhole',
+        description: 'A crosschain bridge.',
+      },
+    ],
+  },
+  {
+    title: "Gold Sponsors",
+    size: 400,
+    sponsors: [
       {
         link: 'https://google.com',
         image: googleLogo,
@@ -37,7 +51,7 @@ const sponsors: Array<{
   },
   {
     title: 'In Kind Donation Sponsors',
-    size: 400,
+    size: 300,
     sponsors: [
       {
         link: 'https://gen.xyz/',
@@ -47,18 +61,6 @@ const sponsors: Array<{
       },
     ],
   },
-  // {
-  //   title: "Gold Sponsors",
-  //   size: 600,
-  //   sponsors: [
-  //     { link: "", image: googleLogo },
-  //     {
-  //       link: "",
-  //       image: googleLogo,
-  //       style: "padding:1rem;background:white;",
-  //     },
-  //   ],
-  // },
 ];
 ---
 
@@ -91,7 +93,7 @@ const sponsors: Array<{
                         width={category.size}
                       />
                     </a>
-                    <div set:html={textToHtml(sponsor.description)} />
+                    <div class="description" set:html={textToHtml(sponsor.description)} />
                   </div>
                 ))}
               </div>
@@ -118,6 +120,9 @@ const sponsors: Array<{
   .title {
     margin: 1rem 0 2rem;
     text-transform: uppercase;
+  }
+  .description {
+    color: rgb(122, 150, 150);
   }
   img {
     max-width: 100%;
