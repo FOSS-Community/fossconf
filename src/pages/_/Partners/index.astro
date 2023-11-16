@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-
+import Osdc from './logos/osdc.png';
 import Ocd from './logos/ocd.png';
 import AssetMantle from './logos/assetmantle.svg';
 
@@ -14,6 +14,12 @@ const partners: any[] = [
     name: 'AssetMantle',
     images: AssetMantle,
     link: 'https://www.assetmantle.one/',
+  },
+  {
+    name: 'OSDC',
+    images: Osdc,
+    width: '280px',
+    link: 'https://osdc.dev',
   },
 ];
 ---
@@ -41,13 +47,14 @@ const partners: any[] = [
   }
   .partners {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
     grid-gap: 1rem;
     justify-content: center;
     align-items: center;
   }
   .partner-item {
-    margin-bottom: 1rem; /* Add some margin between logos */
+    margin-bottom: 1rem;
+    margin: 0 auto;
   }
   @media screen and (min-width: 768px) {
     .partners {
@@ -59,6 +66,11 @@ const partners: any[] = [
       justify-content: space-between;
     }
   }
+  @media screen and (max-width: 767px) {
+    .partners {
+      justify-content: center;
+    }
+  }
   img {
     margin: 0;
     height: fit-content;
@@ -66,4 +78,3 @@ const partners: any[] = [
     width: fit-content;
   }
 </style>
-
