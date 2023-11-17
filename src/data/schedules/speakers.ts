@@ -1,11 +1,11 @@
 import { textToHtml } from '@src/utils/text-to-html';
 
 const sessionizeScheduleUrl =
-  'https://sessionize.com/api/v2/956d1por/view/GridSmart';
+  'https://sessionize.com/api/v2/nwcu1hfs/view/GridSmart';
 const sessionizeSchedule = await (await fetch(sessionizeScheduleUrl)).json();
 
 const sessionizeSpeakersUrl =
-  'https://sessionize.com/api/v2/956d1por/view/Speakers';
+  'https://sessionize.com/api/v2/nwcu1hfs/view/Speakers';
 const sessionizeSpeakers = await (await fetch(sessionizeSpeakersUrl)).json();
 
 const speakers = sessionizeSpeakers
