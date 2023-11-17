@@ -10,6 +10,7 @@ import Panelists from "./Panelists.svelte"
       Panelists
     </h2>
   </div>
+  <h3>Breaking Barriers: Women Redefining Tech</h3><br/>
   <div class="grid">
     <Panelists panelists={panelists} client:visible />
   </div>
@@ -19,6 +20,13 @@ import Panelists from "./Panelists.svelte"
   h2 {
     --stroke-color: var(--red);
   }
+
+  h3 {
+  font-size: 2.5rem;
+  color: var(--green);
+  line-height: 1.5;
+  margin-bottom: 0.15em;
+}
   .grid {
     --columns: 2;
     display: grid;
