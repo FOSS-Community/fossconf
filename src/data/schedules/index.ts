@@ -123,13 +123,13 @@ const schedule = {
               bio: 'Prev: @tursodatabase | Tweeting about Javascript, Web Development, Communities, Remote jobs, Travel',
               twitter: 'swastika0015',
             },
-            // {
-            //   name: 'Misha Alsner',
-            //   id: 'misha',
-            //   imgUrl: { default: misha },
-            //   position: 'Engineer at Kamaz and SBER',
-            //   bio: 'Python/C++ developer.  Engineer at Kamaz and SBER Company. Part of community Ecole 42',
-            // },
+            {
+              name: 'Misha Alsner',
+              id: 'misha',
+              imgUrl: { default: misha },
+              position: 'Engineer at Kamaz and SBER',
+              bio: 'Python/C++ developer.  Engineer at Kamaz and SBER Company. Part of community Ecole 42',
+            },
             {
               name: 'Shruti Panjwani',
               id: 'shruti',
