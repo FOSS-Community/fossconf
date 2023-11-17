@@ -1,19 +1,19 @@
 ---
-import Hero from "./_/Hero/index.astro"
-import Layout from "@src/layouts/Layout.astro"
-import About from "./_/About.astro"
-import Schedule from "./_/Schedule/index.astro"
-import Keynotes from "./_/Keynotes/index.astro"
-import Panelists from "./_/Panelists/index.astro"
-import Speakers from "./_/Speakers/speakers.astro"
-import Testimonials from "./_/Testimonials/index.astro"
-import Sponsors from "./_/Sponsors/index.astro"
-import Ticket from "./_/Ticket/index.astro"
-import Partners from "./_/Partners/index.astro"
-import Organisers from "./_/Organisers/index.astro"
-import Volunteers from "./_/Volunteers/index.astro"
-import External from "../components/external.svg"
-import { schedule, panelists, keynote } from "@src/data/schedules/current"
+import Hero from './_/Hero/index.astro';
+import Layout from '@src/layouts/Layout.astro';
+import About from './_/About.astro';
+import Schedule from './_/Schedule/index.astro';
+import Keynotes from './_/Keynotes/index.astro';
+import Panelists from './_/Panelists/index.astro';
+import Speakers from './_/Speakers/speakers.astro';
+import Testimonials from './_/Testimonials/index.astro';
+import Sponsors from './_/Sponsors/index.astro';
+import Ticket from './_/Ticket/index.astro';
+import Partners from './_/Partners/index.astro';
+import Organisers from './_/Organisers/index.astro';
+import Volunteers from './_/Volunteers/index.astro';
+import External from '../components/external.svg';
+import { schedule, panelists, keynote } from '@src/data/schedules/current';
 ---
 
 <Layout title="Home">
@@ -27,12 +27,57 @@ import { schedule, panelists, keynote } from "@src/data/schedules/current"
   <Partners />
   <!-- {Array.isArray(schedule.dates) && schedule.dates.length > 0 ? <Schedule /> : null} -->
   <Testimonials />
-  <Organisers />
-  <Volunteers />
+  <hr class="custom-hr" />
+  <div class="header-container">
+    <a href="/team" class="header-link">
+      <h1>People behind the scenes</h1>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke="#54c9b3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="m13 11 8.2-8.2m.8 4V2h-4.8M11 2H9C4 2 2 4 2 9v6c0 5 2 7 7 7h6c5 0 7-2 7-7v-2"
+        ></path>
+      </svg>
+    </a>
+  </div>
+  <hr class="custom-hr" />
 </Layout>
 
 <style>
   hr {
-  color: #61bfae4d;
-}
+    color: #61bfae4d;
+  }
+</style>
+
+<style>
+  .custom-hr {
+    border: 0;
+    height: 5px;
+    background: #43af9b4d;
+    width: 50%;
+    margin: 0 auto 50px;
+  }
+  .header-container {
+    text-align: center;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .header-link h1 {
+    margin: 0;
+  }
 </style>
