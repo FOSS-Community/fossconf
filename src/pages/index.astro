@@ -20,6 +20,29 @@ import { schedule, panelists, keynote } from '@src/data/schedules/current';
   <Hero />
   <About />
   <Ticket />
+
+  <hr class="custom-hr" />
+  <div class="header-container">
+    <a href="/schedule" class="header-link">
+      <h1>Schedule</h1>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke="#54c9b3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="m13 11 8.2-8.2m.8 4V2h-4.8M11 2H9C4 2 2 4 2 9v6c0 5 2 7 7 7h6c5 0 7-2 7-7v-2"
+        ></path>
+      </svg>
+    </a>
+  </div>
+  <hr class="custom-hr" />
   {Array.isArray(keynote) && keynote.length > 0 ? <Keynotes /> : null}
   {Array.isArray(panelists) && panelists.length > 0 ? <Panelists /> : null}
   <Speakers />
