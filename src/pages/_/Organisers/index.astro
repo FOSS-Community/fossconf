@@ -21,24 +21,24 @@ import bhavya from './images/bhavya.jpg';
 import ayush from './images/ayush.jpg';
 
 const organisers = [
-  { name: 'Akshat', image: akshat },
-  { name: 'Kanishk', image: kanishk },
-  { name: 'Vivek', image: vivek },
-  { name: 'Shivam Yadav', image: shivamy },
-  { name: 'Mayank', image: mayank },
-  { name: 'Shivam Kumar', image: shivamk },
-  { name: 'Utkarsh', image: utkarsh },
-  { name: 'Anshika', image: anshika },
-  { name: 'Abhinav', image: abhinav },
-  { name: 'Aditya', image: aditya },
-  { name: 'Vishesh', image: vishesh },
-  { name: 'Rohan', image: rohan },
-  { name: 'sam', image: sam },
-  { name: 'Rishika', image: rishika },
-  { name: 'Ghanatava', image: ghanatava },
-  { name: 'Khushi', image: khushi01 },
-  { name: 'Bhavya', image: bhavya },
-  { name: 'Ayush', image: ayush },
+  { name: 'Akshat', image: akshat, socialUrl: 'https://twitter.com/akshatwts' },
+  { name: 'Kanishk', image: kanishk, socialUrl: 'https://twitter.com/itsKanishkP' },
+  { name: 'Vivek', image: vivek, socialUrl: 'https://twitter.com/vivekpal0x' },
+  { name: 'Shivam Yadav', image: shivamy, socialUrl: 'https://twitter.com/codecShivam' },
+  { name: 'Mayank', image: mayank, socialUrl: 'https://twitter.com/_0xmayank' },
+  { name: 'Shivam Kumar', image: shivamk, socialUrl: 'https://twitter.com/CodeItShivam' },
+  { name: 'Utkarsh', image: utkarsh, socialUrl: 'https://twitter.com/twtutkarsh' },
+  { name: 'Anshika', image: anshika, socialUrl: '' },
+  { name: 'Abhinav', image: abhinav, socialUrl: '' },
+  { name: 'Aditya', image: aditya, socialUrl: 'https://twitter.com/adityaslyf' },
+  { name: 'Vishesh', image: vishesh, socialUrl: '' },
+  { name: 'Rohan', image: rohan, socialUrl: '' },
+  { name: 'sam', image: sam, socialUrl: 'https://x.com/BlueCircle0' },
+  { name: 'Rishika', image: rishika, socialUrl: '' },
+  { name: 'Ghanatava', image: ghanatava, socialUrl: '' },
+  { name: 'Khushi', image: khushi01, socialUrl: '' },
+  { name: 'Bhavya', image: bhavya, socialUrl: '' },
+  { name: 'Ayush', image: ayush, socialUrl: '' },
 ];
 ---
 
@@ -50,7 +50,7 @@ const organisers = [
     {
       organisers.map((organiser) => {
         return (
-          <a href="">
+          <a href={organiser.socialUrl} target="_blank" rel="noopener noreferrer">
             <div class="organiser">
               <div class="container">
                 <Image src={organiser.image} alt={organiser.name} width={200} />
@@ -60,7 +60,7 @@ const organisers = [
           </a>
         );
       })
-    }
+    }    
   </div>
 </section>
 
