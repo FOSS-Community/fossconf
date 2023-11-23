@@ -7,7 +7,7 @@ import ConsoleClient from './Console.svelte';
 import { Image } from 'astro:assets';
 import * as cfp from '@src/data/cfp';
 import ticket from './ticket.png';
-import { discordLink, ticketLink, venueLink, venueName, gettingThereLink } from '@src/data/links';
+import { discordLink, ticketLink, venueLink, venueName, gettingThereLink, calenderLink } from '@src/data/links';
 import { year, startDate, endDate } from '@src/data/date';
 
 const format = new Intl.DateTimeFormat('default', {
@@ -19,6 +19,7 @@ const data = formatter()
   .addEntry('title', `FOSSConf ${year}`)
   .addEntry('startDate', startDate ? `${format.format(startDate)}` : 'TBC')
   .addEntry('endDate', endDate ? `${format.format(endDate)}` : 'TBC')
+  .addEntry('calendarInvite', `<a href="${calenderLink}">Add to your Calendar</a>`)
   .addEntry('inPersonLocation', `<a href="${venueLink}">${venueName}</a>`)
   .addEntry('gettingThere', `<a href="${gettingThereLink}">Directions</a>`)
   .addEntry('support', `<a href="${discordLink}">Discord</a>`)
