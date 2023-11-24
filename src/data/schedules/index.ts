@@ -4,7 +4,6 @@ import tushars from '../images/speakers/tushars.jpg?h=400';
 import jatink from '../images/speakers/jatink.jpg?h=400';
 import shreya from '../images/speakers/shreya.png?h=400';
 import swastika from '../images/speakers/swastika.png?h=400';
-import misha from '../images/speakers/Misha.jpg?h=400';
 import shruti from '../images/speakers/Shruti.jpeg?h=400';
 
 const schedule = {
@@ -122,13 +121,6 @@ const schedule = {
               position: 'Developer Advocate @Rig_dev',
               bio: 'Prev: @tursodatabase | Tweeting about Javascript, Web Development, Communities, Remote jobs, Travel',
               twitter: 'swastika0015',
-            },
-            {
-              name: 'Misha Alsner',
-              id: 'misha',
-              imgUrl: { default: misha },
-              position: 'Engineer at Kamaz and SBER',
-              bio: 'Python/C++ developer.  Engineer at Kamaz and SBER Company. Part of community Ecole 42',
             },
             {
               name: 'Shruti Panjwani',
