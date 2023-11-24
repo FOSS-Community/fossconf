@@ -3,8 +3,9 @@ import { Image } from 'astro:assets';
 import { textToHtml } from '@src/utils/text-to-html.ts';
 import solanaLogo from './logos/solanaLogo.svg';
 import googleLogo from './logos/googleLogo.png';
-import wormholeWhite from './logos/WormholeWhite.svg'
+import wormholeWhite from './logos/WormholeWhite.svg';
 import xyzLogo from './logos/Vector.svg';
+import taipy from './logos/taipy.png';
 
 const sponsors: Array<{
   title: string;
@@ -25,7 +26,8 @@ const sponsors: Array<{
         link: 'https://solana.com/',
         image: solanaLogo,
         name: 'Solana Foundation',
-        description: 'A blockchain platform with high scalablity while keeping costs low.',
+        description:
+          'A blockchain platform with high scalablity while keeping costs low.',
       },
       {
         link: 'https://wormhole.com',
@@ -37,9 +39,16 @@ const sponsors: Array<{
     ],
   },
   {
-    title: "Gold Sponsors",
+    title: 'Gold Sponsors',
     size: 400,
     sponsors: [
+      {
+        link: 'https://www.taipy.io/',
+        image: taipy,
+        style: 'padding:1rem;background:transparent;',
+        name: 'TaiPy',
+        description: 'An open-source Python library for building production-ready web applications',
+      },
       {
         link: 'https://google.com',
         image: googleLogo,
@@ -93,7 +102,10 @@ const sponsors: Array<{
                         width={category.size}
                       />
                     </a>
-                    <div class="description" set:html={textToHtml(sponsor.description)} />
+                    <div
+                      class="description"
+                      set:html={textToHtml(sponsor.description)}
+                    />
                   </div>
                 ))}
               </div>
