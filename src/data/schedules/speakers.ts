@@ -23,7 +23,7 @@ const speakers = sessionizeSpeakers
   }));
 
 const schedule = {
-  year: 2023,
+  year: 2024,
   timeZone: 'Asia/Kolkata',
   dates: sessionizeSchedule.map((date: { date: any; rooms: any[]; }) => ({
     date: date.date,

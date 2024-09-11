@@ -15,25 +15,24 @@ const format = new Intl.DateTimeFormat('default', {
   timeStyle: 'short',
   timeZone: 'Asia/Kolkata',
 });
+
 const data = formatter()
   .addEntry('title', `FOSSConf ${year}`)
-  .addEntry('startDate', startDate ? `${format.format(startDate)}` : 'TBC')
+  .addEntry('startDate', startDate ? `${format.format(startDate)}` : 'TBC (To Be Confirmed)')
   .addEntry('endDate', endDate ? `${format.format(endDate)}` : 'TBC')
-  .addEntry('calendarInvite', `<a href="${calenderLink}">Add to your Calendar</a>`)
-  .addEntry('inPersonLocation', `<a href="${venueLink}">${venueName}</a>`)
-  .addEntry('gettingThere', `<a href="${gettingThereLink}">Directions</a>`)
-  .addEntry('support', `<a href="${discordLink}">Discord</a>`)
-  .addEntry('registration', `<a href="${ticketLink}">Register Here!</a>`)
-  .addEntry(
-    'volunteer',
-    `<a href="https://airtable.com/appyqESu1jTLyRj5b/shrADLMpduaaLPS9R">Apply now!</a>`,
-  )
-  .addEntry(
-    'cfp',
-    +Date.now() > +cfp.deadline
-      ? 'CFP is now closed.'
-      : `<a href="https://sessionize.com/fossconf-2023/">Submit Now!</a>`,
-  )
+  .addEntry('calendarInvite', calenderLink ? `<a href="${calenderLink}">Add to your Calendar</a>` : 'Calendar link coming soon')
+  .addEntry('inPersonLocation', venueLink ? `<a href="${venueLink}">${venueName}</a>` : 'Venue information coming soon')
+  .addEntry('gettingThere', gettingThereLink ? `<a href="${gettingThereLink}">Directions</a>` : 'Directions coming soon')
+  .addEntry('support', discordLink ? `<a href="${discordLink}">Discord</a>` : 'Join our community soon')
+  .addEntry('registration', ticketLink ? `<a href="${ticketLink}">Register Here!</a>` : 'Registration details coming soon.')
+  // .addEntry(
+  //   'cfp',
+  //   +Date.now() > +cfp.deadline
+  //     ? 'CFP is now closed.'
+  //     : `<a href="https://sessionize.com/fossconf-2024/">Submit Now!</a>`,
+  // )
+  // Volunteer link
+  // .addEntry('volunteer', `<a href="https://airtable.com/appyqESu1jTLyRj5b/shrADLMpduaaLPS9R">Apply now!</a>`)
   .addEntry('description', 'An event immersed in the open-source ambiance.')
   .toString();
 ---
@@ -49,17 +48,21 @@ const data = formatter()
       </ConsoleClient>
     </Console>
   </div>
-  <!-- <div class="announcement">
+  <!-- Optional ticket section, you can enable it when tickets are live -->
+  <!-- 
+  <div class="announcement">
     <div class="announcement-content">
-      <code class="animated-message"
-        ><a href="/tickets">Tickets are live!</a>
+      <code class="animated-message">
+        <a href="/tickets">Tickets are live!</a>
       </code>
       <a href="/tickets">
         <Image src={ticket} alt="Ticket Image" class="ticket-image" />
       </a>
     </div>
-  </div> -->
+  </div>
+  -->
 </section>
+
 <div style="margin-bottom: 50px;">
   <Line />
 </div>
@@ -69,6 +72,7 @@ const data = formatter()
     white-space: break-spaces;
     line-height: 1.26;
   }
+
   hr:nth-of-type(2) {
     margin-bottom: 3.5rem;
   }
@@ -107,6 +111,7 @@ const data = formatter()
     margin-right: 2em;
     margin-left: 2em;
   }
+
   .ticket-link:hover {
     text-decoration: underline;
   }

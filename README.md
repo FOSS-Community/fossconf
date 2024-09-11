@@ -2,7 +2,7 @@
     <img src="https://i.ibb.co/QJ8fhsq/fosscu.png?s=96" alt="FOSSCU Logo" width="100" />
 </p>
 
-# FOSSConf India 2023 website
+# FOSSConf India 2024 website
 
 > The repo for the FOSSConf India website, based on
 > Astro.js and Typescript.

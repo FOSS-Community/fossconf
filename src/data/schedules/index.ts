@@ -7,7 +7,7 @@ import swastika from '../images/speakers/swastika.png?h=400';
 import shruti from '../images/speakers/Shruti.jpeg?h=400';
 
 const schedule = {
-  year: 2023,
+  year: 2024,
   timeZone: 'Asia/Kolkata',
   dates: [
     {
